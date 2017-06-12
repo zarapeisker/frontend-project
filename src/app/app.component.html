@@ -1,4 +1,10 @@
-<h1>
-  {{title}}
-</h1>
+<md-toolbar color="primary">
+  <button md-button color="accent" [routerLink]="['/home']">Project</button>
+  <button md-button [routerLink]="['/home']">Home</button>
+  <button md-button [routerLink]="['/students']">Students</button>
+  <button md-button [routerLink]="['/tutors']">Tutors</button>
+  <button md-icon-button>
+    <md-icon>account_circle</md-icon>
+  </button>
+</md-toolbar>
 <router-outlet></router-outlet>
