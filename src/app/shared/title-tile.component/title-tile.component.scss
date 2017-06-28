@@ -1,0 +1,19 @@
+.tile {
+  display: grid;
+  grid: repeat(3, 1fr) / repeat(5, 1fr);
+  align-items: center;
+  height: 21rem;
+}
+
+.title-text {
+  grid-area: 2 / 2 / 3 / 4;
+  z-index: 10;
+}
+
+img {
+  width: 100%;
+  height: auto;
+  grid-area: 1 / 1 / end / end;
+}
+
+

@@ -1,0 +1,19 @@
+.grid-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.double-search {
+  display: flex;
+  flex-direction: row;
+}
+
+.double-search-items {
+  flex-grow: 1;
+}
+
+.double-search-divider {
+  height: 20rem;
+  width: .5rem;
+  background-color: black;
+}

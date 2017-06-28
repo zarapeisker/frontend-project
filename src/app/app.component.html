@@ -1,10 +1,21 @@
-<md-toolbar color="primary">
-  <button md-button color="accent" [routerLink]="['/home']">Project</button>
-  <button md-button [routerLink]="['/home']">Home</button>
-  <button md-button [routerLink]="['/students']">Students</button>
-  <button md-button [routerLink]="['/tutors']">Tutors</button>
-  <button md-icon-button>
-    <md-icon>account_circle</md-icon>
+<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+  <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+    <span class="navbar-toggler-icon"></span>
   </button>
-</md-toolbar>
+  <a class="navbar-brand" [routerLink]="['/home']">EdRefuge</a>
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+     <ul class="navbar-nav mr-auto">
+        <li class="nav-item active">
+          <a class="nav-link" [routerLink]="['/home']">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/students']">Students</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" [routerLink]="['/tutors']">Tutors</a>
+        </li>
+      </ul>
+  </div>
+  <i class="fa fa-user-circle" aria-hidden="true"></i>
+</nav>
 <router-outlet></router-outlet>

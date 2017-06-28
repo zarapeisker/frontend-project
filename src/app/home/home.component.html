@@ -1,5 +1,12 @@
-<app-title-tile [title]="title" [subtitle]="subtitle"></app-title-tile>
-<app-search-tile></app-search-tile>
-<app-feature-tile></app-feature-tile>
-<app-get-started-tile></app-get-started-tile>
-<app-reviews-tile></app-reviews-tile>
+<div class="grid-container">
+  <app-title-tile [title]="title" [subtitle]="subtitle"></app-title-tile>
+  <div class="double-search">
+    <app-search-tile class="double-search-items"></app-search-tile>
+    <span class="double-search-divider"></span>
+    <app-search-tile class="double-search-items"></app-search-tile>
+  </div>
+  <app-feature-tile></app-feature-tile>
+  <app-get-started-tile></app-get-started-tile>
+  <app-reviews-tile></app-reviews-tile>
+</div>
+
