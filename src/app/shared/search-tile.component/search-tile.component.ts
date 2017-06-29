@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   moduleId: module.id,
@@ -7,4 +7,6 @@ import {Component} from '@angular/core';
   templateUrl: 'search-tile.component.html'
 })
 
-export class SearchTileComponent { }
+export class SearchTileComponent {
+  @Input() searchButtonText: string;
+}

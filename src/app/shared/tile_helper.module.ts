@@ -5,6 +5,7 @@ import {TestimonialTileComponent} from './testimonial-tile.component/testimonial
 import {SearchTileComponent} from './search-tile.component/search-tile.component';
 import {TitleTileComponent} from './title-tile.component/title-tile.component';
 import {CommonModule} from '@angular/common';
+import {UserListComponent} from './user-list.component/user-list.component';
 
 
 @NgModule({
@@ -16,14 +17,16 @@ import {CommonModule} from '@angular/common';
     GetStartedTileComponent,
     TestimonialTileComponent,
     SearchTileComponent,
-    TitleTileComponent
+    TitleTileComponent,
+    UserListComponent
   ],
   exports: [
     FeatureTileComponent,
     GetStartedTileComponent,
     TestimonialTileComponent,
     SearchTileComponent,
-    TitleTileComponent
+    TitleTileComponent,
+    UserListComponent
   ]
 })
 
