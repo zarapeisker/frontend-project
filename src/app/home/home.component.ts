@@ -7,5 +7,11 @@ import {Component} from '@angular/core';
 })
 
 export class HomeComponent {
-  subtitle = 'EdRefuge connects refugees and tutors. Save the world, one lesson at a time.';
+  titleQuote = 'EdRefuge connects refugees and tutors. Save the world, one lesson at a time.';
+  aboutQuote1 = 'EdRefuge connects refugees and tutors.';
+  aboutQuote2 = 'Our tutors change lives.';
+  aboutQuote3 = 'Our students change the world.';
+  testimonialQuote1 = 'EdRefuge rocks!';
+  testimonialQuote2 = 'I love EdRefuge!';
+  testimonialQuote3 = 'What they said!';
 }

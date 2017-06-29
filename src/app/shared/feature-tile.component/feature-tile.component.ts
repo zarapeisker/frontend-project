@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   moduleId: module.id,
@@ -7,4 +7,8 @@ import {Component} from '@angular/core';
   styleUrls: ['feature-tile.component.scss']
 })
 
-export class FeatureTileComponent { }
+export class FeatureTileComponent {
+  @Input() aboutQuote1: string;
+  @Input() aboutQuote2: string;
+  @Input() aboutQuote3: string;
+}

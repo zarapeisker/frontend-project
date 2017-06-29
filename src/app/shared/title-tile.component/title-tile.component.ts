@@ -8,6 +8,6 @@ import {Component, Input} from '@angular/core';
 })
 
 export class TitleTileComponent {
-  @Input() title: string;
-  @Input() subtitle: string;
+  @Input() titleQuote: string;
+  @Input() titleAuthor: string;
 }

@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   moduleId: module.id,
@@ -7,4 +7,8 @@ import {Component} from '@angular/core';
   styleUrls: ['testimonial-tile.component.scss']
 })
 
-export class ReviewsTileComponent { }
+export class TestimonialTileComponent {
+  @Input() testimonialQuote1: string;
+  @Input() testimonialQuote2: string;
+  @Input() testimonialQuote3: string;
+}

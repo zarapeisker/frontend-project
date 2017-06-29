@@ -1,7 +1,9 @@
 <div class="tile">
   <span class="title-text">
-    <h1>{{title}}</h1>
-    <h4>{{subtitle}}</h4>
+    <blockquote class="blockquote">
+      <p>{{titleQuote}}</p>
+      <footer *ngIf="titleAuthor" class="blockquote-footer">{{titleAuthor}}</footer>
+    </blockquote>
   </span>
 </div>
 

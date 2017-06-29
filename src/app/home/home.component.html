@@ -1,11 +1,10 @@
 <div class="grid-container">
-  <app-title-tile [subtitle]="subtitle"></app-title-tile>
+  <app-title-tile [titleQuote]="titleQuote"></app-title-tile>
   <div class="double-search">
     <app-search-tile class="double-search-items"></app-search-tile>
-    <span class="double-search-divider"></span>
     <app-search-tile class="double-search-items"></app-search-tile>
   </div>
-  <app-feature-tile></app-feature-tile>
-  <app-testimonial-tile></app-testimonial-tile>
+  <app-feature-tile [aboutQuote1]="aboutQuote1" [aboutQuote2]="aboutQuote2" [aboutQuote3]="aboutQuote3"></app-feature-tile>
+  <app-testimonial-tile [testimonialQuote1]="testimonialQuote1" [testimonialQuote2]="testimonialQuote2" [testimonialQuote3]="testimonialQuote3"></app-testimonial-tile>
 </div>
 
