@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, Input} from '@angular/core';
 
 @Component({
   moduleId: module.id,
@@ -7,4 +7,8 @@ import {Component} from '@angular/core';
   styleUrls: ['get-started-tile.component.scss']
 })
 
-export class GetStartedTileComponent { }
+export class GetStartedTileComponent {
+  @Input() step1: string;
+  @Input() step2: string;
+  @Input() step3: string;
+}

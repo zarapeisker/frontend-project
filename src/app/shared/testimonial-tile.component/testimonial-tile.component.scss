@@ -4,13 +4,13 @@
   height: 20rem;
 }
 
-.testimonials {
-  grid-area: 2 / 2 / 3 / 3;
-}
-
 .testimonial-title {
   grid-area: 1 / 1 / 2 / 2;
   margin: 1rem;
+}
+
+.testimonials {
+  grid-area: 2 / 2 / 3 / 3;
 }
 
 
