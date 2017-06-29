@@ -7,6 +7,5 @@ import {Component} from '@angular/core';
 })
 
 export class HomeComponent {
-  title = 'EdRefuge';
-  subtitle = 'Where refugees find tutors.';
+  subtitle = 'EdRefuge connects refugees and tutors. Save the world, one lesson at a time.';
 }
