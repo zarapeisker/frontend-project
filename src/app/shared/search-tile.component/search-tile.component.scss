@@ -1,17 +1,17 @@
 .tile {
   display: grid;
-  background-color: #0275d8;
-  grid: repeat(4, 1fr) / repeat(5, 1fr);
+  background-color: black;
+  grid: repeat(3, 1fr) / repeat(5, 1fr);
   height: 20rem;
   align-items: center;
 }
 
-.search-title {
+.search-group {
   grid-area: 2 / 2 / 3 / 5;
 }
 
-.searchbar {
-  grid-area: 3 / 2 / 4 / 5;
+.search-button {
+  margin-top: 1rem;
 }
 
 
