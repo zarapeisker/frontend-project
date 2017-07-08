@@ -1,0 +1,13 @@
+<div class="card-container">
+  <div *ngFor="let session of sessions" class="card">
+    <img class="card-img-top" src="https://tefltrainerspain.files.wordpress.com/2013/01/smiling-teacher.jpg">
+    <div class="card-block">
+      <h4 class="card-title">{{session.teacher}}</h4>
+      <p class="card-text">Appointment: {{session.appointment}}</p>
+      <p class="card-text">Description: {{session.description}}</p>
+      <p class="card-text">Subject: {{session.subject}}</p>
+      <p class="card-text">Language: {{session.language}}</p>
+      <button type="button" [routerLink]="['/session']" class="btn bg-inverse text-white">Session Details</button>
+    </div>
+  </div>
+</div>

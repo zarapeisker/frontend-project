@@ -1,0 +1,16 @@
+.grid-container {
+  height: 80vh;
+  display: grid;
+  grid: repeat(3, 1fr) / repeat(3, 1fr);
+  align-items: center;
+  justify-items: center;
+}
+
+form {
+  grid-area: 2 / 2 / 3 / 3;
+  display: grid;
+}
+
+input {
+  margin-top: 1rem;
+}

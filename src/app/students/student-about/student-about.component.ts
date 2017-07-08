@@ -15,7 +15,7 @@ export class StudentAboutComponent {
   aboutQuote2 = 'EdRefuge does this other amazing thing for students.';
   aboutQuote3 = 'EdRefuge does a third amazing thing for students.';
   step1 = 'Step 1: Search for a subject.';
-  step2 = 'Step 2: Create a profile.';
+  step2 = 'Step 2: Create a profile.component.';
   step3 = 'Step 3: Start learning!';
   testimonialQuote1 = 'The tutors rock!';
   testimonialQuote2 = 'I love EdRefuge tutors!';

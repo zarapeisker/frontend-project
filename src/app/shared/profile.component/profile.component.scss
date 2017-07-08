@@ -1,0 +1,45 @@
+img {
+  height: 30vh;
+}
+
+.grid-container {
+  display: grid;
+  grid: 10vh 1fr 1fr 20vh / repeat(3, 1fr);
+  justify-items: center;
+}
+
+.name-item {
+  grid-area: 2 / 1 / 3 / 2;
+}
+
+.skill-item {
+  grid-area: 3 / 1 / 4 / 2;
+  align-self: start;
+}
+
+.review-item {
+  grid-area: 4 / 1 / end / 2;
+  align-self: start;
+}
+
+.personal-item {
+  grid-area: 2 / 2 / 4 / 3;
+}
+
+.schedule-item {
+  grid-area: 2 / 3 / 3 / end;
+}
+
+ngb-datepicker {
+  margin: 20px;
+}
+
+.buttons-item {
+  grid-area: 3 / 3 / 4 / end;
+  align-self: start;
+}
+
+.buttons-item > button {
+  display: block;
+  margin-top: 10px;
+}

@@ -16,9 +16,19 @@
         </li>
       </ul>
   </div>
-  <i class="fa fa-sign-in"></i>
+  <i class="fa fa-comments" [routerLink]="['/student-home']"></i>
+  <div ngbDropdown>
+    <i class="fa fa-user" ngbDropdownToggle></i>
+    <div class="dropdown-menu">
+      <button class="dropdown-item" [routerLink]="['/profile']">Manage Account</button>
+      <button class="dropdown-item" [routerLink]="['/home']">Sign Out</button>
+    </div>
+  </div>
+  <i [routerLink]="['/login']" class="fa fa-sign-in"></i>
 </nav>
-<router-outlet></router-outlet>
+<div class="content">
+  <router-outlet></router-outlet>
+</div>
 <footer class="footer bg-inverse">
   <span class="social-media">
     <i class="fa fa-facebook-square"></i>

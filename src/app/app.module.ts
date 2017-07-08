@@ -7,6 +7,8 @@ import {HomeComponent} from './home/home.component';
 import {StudentModule} from './students/student.module';
 import {TutorModule} from './tutors/tutor.module';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import {LoginModule} from './login/login.module';
+
 
 @NgModule({
   imports: [
@@ -19,6 +21,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
     ]),
     StudentModule,
     TutorModule,
+    LoginModule,
     NgbModule.forRoot()
   ],
   declarations: [

@@ -1,0 +1,16 @@
+.card-container {
+  display: grid;
+  grid: 1fr / repeat(4, 1fr);
+  justify-items: center;
+}
+
+.card-img-top {
+  width: 20rem;
+  height: 15rem;
+}
+
+.card {
+  width: 20rem;
+}
+
+

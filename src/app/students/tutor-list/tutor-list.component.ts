@@ -7,7 +7,7 @@ import {Component} from '@angular/core';
 })
 
 export class TutorListComponent {
-  tutors = [
+  tutors: Array<object> = [
     {name: 'Sally'},
     {name: 'Fred'},
     {name: 'Durst'}

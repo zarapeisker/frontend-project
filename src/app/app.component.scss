@@ -1,5 +1,9 @@
-.fa-sign-in {
+.fa {
   color: white;
+}
+
+.fa-user, .fa-comments {
+  padding-right: 1rem;
 }
 
 .social-media {
@@ -10,9 +14,8 @@
   padding-left: .5rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
-  color: white;
 }
 
-
-
-
+.content {
+  flex: 1;
+}

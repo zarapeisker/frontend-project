@@ -2,8 +2,8 @@ import {Component} from '@angular/core';
 
 @Component({
   moduleId: module.id,
-  templateUrl: 'tutor-about.component.html',
-  styleUrls: ['tutor-about.component.scss']
+  templateUrl: './tutor-about.component.html',
+  styleUrls: ['./tutor-about.component.scss']
 })
 
 export class TutorAboutComponent {
@@ -14,7 +14,7 @@ export class TutorAboutComponent {
   aboutQuote2 = 'EdRefuge does this other amazing thing for tutors.';
   aboutQuote3 = 'EdRefuge does a third amazing thing for tutors.';
   step1 = 'Step 1: Search for students looking for your expertise.';
-  step2 = 'Step 2: Create a tutor profile.';
+  step2 = 'Step 2: Create a tutor profile.component.';
   step3 = 'Step 3: Start helping students!';
   testimonialQuote1 = 'The students rock!';
   testimonialQuote2 = 'I love EdRefuge students!';

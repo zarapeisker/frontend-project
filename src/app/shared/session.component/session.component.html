@@ -1,0 +1,17 @@
+<div class="grid-container">
+  <div class="name-item">
+    <h3>{{session.appointment}}</h3>
+    <p>With {{session.teacher}}</p>
+    <img src="https://tefltrainerspain.files.wordpress.com/2013/01/smiling-teacher.jpg">
+  </div>
+  <div class="personal-item">
+    <h3>Language</h3>
+    <p>{{session.language}}</p>
+    <h3>Subject</h3>
+    <p>{{session.subject}}</p>
+    <h3>Description</h3>
+    <p>{{session.description}}</p>
+    <button type="button" class="btn bg-inverse text-white" [routerLink]="['/videochat']">Start Session</button>
+    <button class="btn bg-inverse text-white" [routerLink]="['/student-home']">Back</button>
+  </div>
+</div>

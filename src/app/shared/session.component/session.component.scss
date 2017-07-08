@@ -1,0 +1,19 @@
+img {
+  height: 30vh;
+}
+
+.grid-container {
+  display: grid;
+  grid: 10vh 1fr / repeat(4, 1fr);
+  justify-items: center;
+}
+
+.name-item {
+  grid-area: 2 / 2 / end / 3;
+}
+
+.personal-item {
+  grid-area: 2 / 3 / end / 4;
+}
+
+
