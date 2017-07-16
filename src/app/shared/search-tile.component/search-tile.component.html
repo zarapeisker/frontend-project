@@ -1,6 +1,6 @@
 <div class="tile">
   <div class="search-group">
     <input placeholder="Enter a Subject" type="text" class="form-control" [(ngModel)]="subject" [ngbTypeahead]="search"/>
-    <button type="button" class="search-button btn btn-secondary btn-block" (click)="searchSubject()" [routerLink]="['/user-list']">{{searchButtonText}}</button>
+    <button type="button" class="search-button btn btn-block bg-yellow" (click)="searchSubject()" [routerLink]="['/user-list']">{{searchButtonText}}</button>
   </div>
 </div>

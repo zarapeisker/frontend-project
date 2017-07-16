@@ -6,6 +6,104 @@
   font-size: x-large;
 }
 
+//colors
+//$app-dgreen: #024f51;
+//$app-green: #5bbc78;
+//$app-pink: #f19bc2;
+//$app-yellow: #ffed83;
+
+
+$app-black: #050507;
+$app-yellow: #F7CF28;
+$app-red: #EE2830;
+$app-purple: #663091;
+$app-green: #7EC248;
+$app-pink: #ED1579;
+$app-blue: #25AAE1;
+$app-orange: #F79226;
+
+//.color-dgreen {
+//  color: $app-dgreen;
+//}
+//.color-green {
+//  color: $app-green;
+//}
+//.color-pink {
+//  color: $app-pink;
+//}
+//.color-yellow {
+//  color: $app-yellow;
+//}
+//
+//.bg-dgreen {
+//  background-color: $app-dgreen;
+//}
+//.bg-green {
+//  background-color: $app-green;
+//}
+//.bg-pink {
+//  background-color: $app-pink;
+//}
+//.bg-yellow {
+//  background-color: $app-yellow;
+//}
+
+.color-black {
+  color: $app-black;
+}
+.color-white {
+  color: white;
+}
+.color-yellow {
+  color: $app-yellow;
+}
+.color-red {
+  color: $app-red;
+}
+.color-purple {
+  color: $app-purple;
+}
+.color-green {
+  color: $app-green;
+}
+.color-pink {
+  color: $app-pink;
+}
+.color-blue {
+  color: $app-blue;
+}
+.color-orange {
+  color: $app-orange;
+}
+
+.bg-black {
+  background-color: $app-black;
+}
+.bg-white {
+  background-color: white;
+}
+.bg-yellow {
+  background-color: $app-yellow;
+}
+.bg-red {
+  background-color: $app-red;
+}
+.bg-purple {
+  background-color: $app-purple;
+}
+.bg-green {
+  background-color: $app-green;
+}
+.bg-pink {
+  background-color: $app-pink;
+}
+.bg-blue {
+  background-color: $app-blue;
+}
+.bg-orange {
+  background-color: $app-orange;
+}
+
 html, body {
   height: 100vh;
 }

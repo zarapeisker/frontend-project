@@ -1,22 +1,22 @@
-<nav class="navbar navbar-toggleable-md navbar-inverse bg-inverse">
+<nav class="navbar navbar-toggleable-md bg-black">
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand" [routerLink]="['/home']">EdRefuge</a>
+  <a class="navbar-brand color-yellow" [routerLink]="['/home']">EdRefuge</a>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
      <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link" [routerLink]="['/home']">Home</a>
+          <a class="nav-link color-yellow" [routerLink]="['/home']">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/students']">Students</a>
+          <a class="nav-link color-yellow" [routerLink]="['/students']">Students</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" [routerLink]="['/tutors']">Tutors</a>
+          <a class="nav-link color-yellow" [routerLink]="['/tutors']">Tutors</a>
         </li>
       </ul>
   </div>
-  <i class="fa fa-comments" [routerLink]="['/student-home']"></i>
+  <i class="fa fa-comments color-yellow" [routerLink]="['/student-home']"></i>
   <div ngbDropdown>
     <i class="fa fa-user" ngbDropdownToggle></i>
     <div class="dropdown-menu">
@@ -24,12 +24,12 @@
       <button class="dropdown-item" [routerLink]="['/home']">Sign Out</button>
     </div>
   </div>
-  <i [routerLink]="['/login']" class="fa fa-sign-in"></i>
+  <i [routerLink]="['/login']" class="fa fa-sign-in color-yellow"></i>
 </nav>
 <div class="content">
   <router-outlet></router-outlet>
 </div>
-<footer class="footer bg-inverse">
+<footer class="footer bg-black">
   <span class="social-media">
     <i class="fa fa-facebook-square"></i>
     <i class="fa fa-linkedin-square"></i>

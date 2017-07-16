@@ -1,6 +1,46 @@
-<app-title-tile [titleQuote]="titleQuote" [titleAuthor]="titleAuthor"></app-title-tile>
-<app-search-tile [searchButtonText]="searchButtonText"></app-search-tile>
-<app-feature-tile [aboutQuote1]="aboutQuote1" [aboutQuote2]="aboutQuote2" [aboutQuote3]="aboutQuote3"></app-feature-tile>
-<app-get-started-tile [step1]="step1" [step2]="step2" [step3]="step3"></app-get-started-tile>
-<app-testimonial-tile [testimonialQuote1]="testimonialQuote1" [testimonialQuote2]="testimonialQuote2" [testimonialQuote3]="testimonialQuote3"></app-testimonial-tile>
+<div class="grid-container">
+  <div class="title-tile">
+    <app-title-tile [overlayColor]="overlayColor" [titleTextColor]="titleTextColor" [titleImage]="titleImage" [titleQuote]="titleQuote"></app-title-tile>
+  </div>
+  <img class="hero" src="../../../assets/images/hero.png">
+  <div class="search-tile">
+    <app-search-tile [searchButtonText]="searchButtonText"></app-search-tile>
+  </div>
+  <div id="comic-panel-1" class="panel">
+    <img class="panel-image" src="../../../assets/images/pink_bolt_burst_bg.png">
+  </div>
+  <div id="comic-panel-2" class="panel">
+    <img class="panel-image" src="../../../assets/images/green_dot_bg.png">
+    <img class="content-image right" src="../../../assets/images/student_free.png">
+    <div class="text-box top-left">
+      <p>Every session is absolutely free!</p>
+    </div>
+    <div class="white-overlay"></div>
+  </div>
+  <div id="comic-panel-3" class="panel">
+    <img class="panel-image" src="../../../assets/images/orange_bolt_bg.png">
+    <img class="content-image left" src="../../../assets/images/student_searching.png">
+    <div class="text-box top-right">
+      <p>Find the perfect tutor by language, subject, and experience.</p>
+    </div>
+    <div class="white-overlay"></div>
+  </div>
+  <div id="comic-panel-4" class="panel">
+    <img class="panel-image" src="../../../assets/images/red_dot_bg.png">
+    <img class="content-image right" src="../../../assets/images/student_lesson.png">
+    <div class="text-box bottom-left">
+      <p>Get one-on-one help when you need it.</p>
+    </div>
+    <div class="white-overlay"></div>
+  </div>
+  <div id="comic-panel-5" class="panel">
+    <img class="panel-image" src="../../../assets/images/blue_bolt_burst_bg.png">
+  </div>
+  <div id="comic-panel-6" class="panel">
+    <img class="panel-image" src="../../../assets/images/yellow_star_bg.png">
+  </div>
+  <div id="comic-panel-7" class="panel">
+    <img class="panel-image" src="../../../assets/images/purple_bolt_bg.png">
+  </div>
+</div>
 

@@ -1,9 +1,52 @@
-<app-title-tile [titleQuote]="titleQuote"></app-title-tile>
-<div class="double-search">
-  <app-search-tile class="double-search-items" [searchButtonText]="searchButtonText1"></app-search-tile>
-  <app-search-tile class="double-search-items" [searchButtonText]="searchButtonText2"></app-search-tile>
+<div class="grid-container">
+  <div class="title-tile">
+    <app-title-tile [overlayColor]="overlayColor" [titleTextColor]="titleTextColor" [titleImage]="titleImage" [titleQuote]="titleQuote"></app-title-tile>
+  </div>
+  <img class="globe" src="../../assets/images/globe.png">
+  <div id="search-tile-1">
+    <app-search-tile [searchButtonText]="searchButtonText1"></app-search-tile>
+  </div>
+  <div id="search-tile-2">
+    <app-search-tile [searchButtonText]="searchButtonText2"></app-search-tile>
+  </div>
+  <div id="comic-panel-1" class="panel">
+    <img class="panel-image" src="../../assets/images/pink_bolt_burst_bg.png">
+  </div>
+  <div id="comic-panel-2" class="panel">
+    <img class="panel-image" src="../../assets/images/green_dot_bg.png">
+  </div>
+  <div id="comic-panel-3" class="panel">
+    <img class="panel-image" src="../../assets/images/orange_bolt_bg.png">
+    <img class="content-image right" src="../../assets/images/connect.png">
+    <div class="text-box top-left">
+      <p>EdRefuge connects refugees with tutors.</p>
+    </div>
+    <div class="white-overlay"></div>
+  </div>
+  <div id="comic-panel-4" class="panel">
+    <img class="panel-image" src="../../assets/images/red_dot_bg.png">
+    <img class="content-image right" src="../../assets/images/tutors_change_lives.png">
+    <div class="text-box top-left">
+      <p>Our tutors change lives.</p>
+    </div>
+    <div class="white-overlay"></div>
+  </div>
+  <div id="comic-panel-5" class="panel">
+    <img class="panel-image" src="../../assets/images/blue_bolt_burst_bg.png">
+    <img class="content-image left" src="../../assets/images/students_world.png">
+    <div class="text-box bottom-right">
+      <p>Our students change the world.</p>
+    </div>
+    <div class="white-overlay"></div>
+  </div>
+  <div id="comic-panel-6" class="panel">
+    <img class="panel-image" src="../../assets/images/yellow_star_bg.png">
+  </div>
+  <div id="comic-panel-7" class="panel">
+      <img class="panel-image" src="../../assets/images/purple_bolt_bg.png">
+  </div>
+  <div id="comic-panel-8" class="panel">
+    <img class="panel-image" src="../../assets/images/red_star_bg.png">
+  </div>
 </div>
-<app-feature-tile [aboutQuote1]="aboutQuote1" [aboutQuote2]="aboutQuote2" [aboutQuote3]="aboutQuote3"></app-feature-tile>
-<app-testimonial-tile [testimonialQuote1]="testimonialQuote1" [testimonialQuote2]="testimonialQuote2" [testimonialQuote3]="testimonialQuote3"></app-testimonial-tile>
-
 

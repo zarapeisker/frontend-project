@@ -9,5 +9,8 @@ import {Component, Input} from '@angular/core';
 
 export class TitleTileComponent {
   @Input() titleQuote: string;
+  @Input() titleImage: string;
   @Input() titleAuthor: string;
+  @Input() titleTextColor: string;
+  @Input() overlayColor: string;
 }

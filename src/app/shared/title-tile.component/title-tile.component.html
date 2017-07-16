@@ -1,8 +1,10 @@
 <div class="tile">
+  <div class="color-overlay {{overlayColor}}"></div>
+  <img src={{titleImage}}>
   <span class="title-text">
     <blockquote class="blockquote">
-      <p>{{titleQuote}}</p>
-      <footer *ngIf="titleAuthor" class="blockquote-footer">{{titleAuthor}}</footer>
+      <p class={{titleTextColor}}>{{titleQuote}}</p>
+      <footer *ngIf="titleAuthor" class="blockquote-footer {{titleTextColor}}">{{titleAuthor}}</footer>
     </blockquote>
   </span>
 </div>

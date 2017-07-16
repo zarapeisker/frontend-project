@@ -3,9 +3,6 @@ import {FormsModule} from '@angular/forms';
 import {CommonModule} from '@angular/common';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {RouterModule} from '@angular/router';
-import {FeatureTileComponent} from './feature-tile.component/feature-tile.component';
-import {GetStartedTileComponent} from './get-started.component/get-started-tile.component';
-import {TestimonialTileComponent} from './testimonial-tile.component/testimonial-tile.component';
 import {SearchTileComponent} from './search-tile.component/search-tile.component';
 import {TitleTileComponent} from './title-tile.component/title-tile.component';
 import {UserListComponent} from './user-list.component/user-list.component';
@@ -16,6 +13,7 @@ import {MessageListComponent} from './message-list.component/message-list.compon
 import {MessageComponent} from './message.component/message.component';
 import {SessionComponent} from './session.component/session.component';
 import {VideochatComponent} from './videochat.component/videochat.component';
+import {ComicPanelComponent} from './comic-panel.component/comic-panel.component';
 
 
 @NgModule({
@@ -34,9 +32,6 @@ import {VideochatComponent} from './videochat.component/videochat.component';
     ]),
   ],
   declarations: [
-    FeatureTileComponent,
-    GetStartedTileComponent,
-    TestimonialTileComponent,
     SearchTileComponent,
     TitleTileComponent,
     UserListComponent,
@@ -45,12 +40,10 @@ import {VideochatComponent} from './videochat.component/videochat.component';
     MessageListComponent,
     MessageComponent,
     SessionComponent,
-    VideochatComponent
+    VideochatComponent,
+    ComicPanelComponent
   ],
   exports: [
-    FeatureTileComponent,
-    GetStartedTileComponent,
-    TestimonialTileComponent,
     SearchTileComponent,
     TitleTileComponent,
     UserListComponent,
@@ -59,7 +52,8 @@ import {VideochatComponent} from './videochat.component/videochat.component';
     MessageListComponent,
     MessageComponent,
     SessionComponent,
-    VideochatComponent
+    VideochatComponent,
+    ComicPanelComponent
   ]
 })
 

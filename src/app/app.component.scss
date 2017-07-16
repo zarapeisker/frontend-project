@@ -1,5 +1,11 @@
+@import "../styles.scss";
+
+nav {
+  border: 10px solid white;
+}
+
 .fa {
-  color: white;
+  color: $app-yellow;
 }
 
 .fa-user, .fa-comments {
@@ -19,3 +25,18 @@
 .content {
   flex: 1;
 }
+
+a:link {
+  color: $app-yellow;
+}
+a:visited {
+  color: $app-yellow;
+}
+
+footer {
+  border-left: 10px white solid;
+  border-right: 10px white solid;
+  border-bottom: 10px white solid;
+}
+
+

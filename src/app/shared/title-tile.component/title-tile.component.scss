@@ -1,19 +1,27 @@
 .tile {
+  height: 100%;
+  width: 100%;
   display: grid;
-  grid: repeat(3, 1fr) / repeat(5, 1fr);
+  grid: repeat(7, 1fr) / repeat(7, 1fr);
   align-items: center;
-  height: 20rem;
+  justify-items: center;
+  overflow: hidden;
 }
 
 .title-text {
-  grid-area: 2 / 2 / 3 / 4;
-  //z-index: 10;
+  grid-area: 5 / 3 / 6 / 5;
+  z-index: 1;
 }
 
-//img {
-//  width: 100%;
-//  height: auto;
-//  grid-area: 1 / 1 / end / end;
-//}
+img {
+  width: 100%;
+  height: auto;
+  grid-area: 1 / 1 / end / end;
+}
 
-
+.color-overlay {
+  height: 100%;
+  width: 100%;
+  grid-area: 1 / 1 / end / end;
+  opacity:0.5;
+}
