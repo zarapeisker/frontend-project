@@ -15,6 +15,8 @@ const subjects = ['Math', 'English', 'Science', 'Social Studies'];
 
 export class SearchTileComponent {
   @Input() searchButtonText: string;
+  @Input() buttonState: string;
+  @Input() buttonDisabled: boolean;
   subject: string;
 
   search = (text: Observable<string>) =>

@@ -3,17 +3,77 @@ img {
 }
 
 .grid-container {
+  margin-left: 10px;
+  margin-right: 10px;
   display: grid;
-  grid: 10vh 1fr / repeat(4, 1fr);
+  grid: 10vh 10vh 20vh 20vh 10vh / repeat(12, 1fr);
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  justify-items: start;
+  align-items: start;
+}
+
+.comic-panel {
+  height: 100%;
+  width: 100%;
+  align-self: end;
+  display: grid;
+  grid: 1fr / 1fr;
+  overflow: hidden;
+  border: 3px solid black;
+  align-items: center;
+}
+
+.bg-image {
+  grid-area: 1 / 1 / end / end;
+  width: 100%;
+  height: auto;
+}
+
+.text {
+  grid-area: 1 / 1 / end / end;
+  padding: 3vh;
+}
+
+#name-item {
+  grid-area: 2 / 4 / 3 / 7;
+}
+
+#image-item {
+  grid-area: 3 / 4 / 5 / 7;
+  border: 3px solid black;
+  width: 100%;
+  height: calc(40vh + 10px);
+  overflow: hidden;
+  display: grid;
+  grid: 1fr / 1fr;
+  align-items: center;
   justify-items: center;
 }
 
-.name-item {
-  grid-area: 2 / 2 / end / 3;
+#user-image {
+  width: 100%;
+  height: auto;
+  grid-area: 1 / 1 / end / end;
 }
 
-.personal-item {
-  grid-area: 2 / 3 / end / 4;
+#personal-item {
+  grid-area: 3 / 7 / 5 / 10;
+  align-self: end;
 }
 
+#button-item {
+  grid-area: 5 / 7 / 6 / 10;
+  width: 100%;
+}
 
+.white-overlay-light {
+  height: 100%;
+  width: 100%;
+  grid-area: 1 / 1 / end / end;
+  background-color: rgba(255, 255, 255, .5)
+}
+
+.no-margin {
+  margin: 0;
+}

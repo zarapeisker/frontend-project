@@ -1,55 +1,90 @@
 .grid-container {
   display: grid;
-  grid: 59vh / 20vw 80vw;
+  grid: 1fr / repeat(5, 1fr);
+  margin-right: 10px;
+  margin-left: 10px;
+  margin-bottom: 10px;
 }
 
-.comments {
-  grid-area: 1 / 2 / end / end;
+.panel {
+  display: grid;
+  grid: 7vh 51vh 20vh / 1fr;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  grid-area: 1 / 2 / end / 5;
+  border: 3px solid black;
+  background-image: url("../../../assets/images/green_star_burst_bg.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  align-items: start;
 }
 
-.conversation {
-  grid-area: 1 / 1 / end / 2;
+.header-text {
+  grid-area: 1 / 1 / 2 / end;
+  align-self: center;
+  margin: 0;
 }
 
-.chat
-{
+.comments-block {
+  grid-area: 2 / 1 / 3 / end;
+  background-color: white;
+  overflow-y: scroll;
+  height: 50vh;
+  border: 3px solid black;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  padding: 2vh;
+}
+
+.chat {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-.chat li
-{
-  margin-bottom: 10px;
-  padding-bottom: 5px;
-  border-bottom: 1px dotted #B3A9A9;
+.comments-footer {
+  margin-top: 20px;
+  grid-area: 3 / 1 / end / end;
 }
 
-.chat li.left .chat-body
-{
+.chat li {
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 2px dotted grey;
+}
+
+.chat li.left .chat-body {
   margin-left: 60px;
 }
 
-.chat li.right .chat-body
-{
+.chat li.right .chat-body {
   margin-right: 60px;
 }
 
 
-.chat li .chat-body p
-{
+.chat li .chat-body p {
   margin: 0;
   color: #777777;
 }
 
-.comments-block
-{
-  overflow-y: scroll;
-  height: 59vh;
-}
-
 button {
   margin-top: 10px;
+}
+
+.chat-img-container.float-left, .chat-img-container.float-right {
+  height: 5vh;
+  width: 5vh;
+  overflow: hidden;
+}
+
+.chat-img {
+  height: 100%;
+  width: auto
+}
+
+i {
+  font-size: 1rem;
 }
 
 ::-webkit-scrollbar-track
@@ -69,3 +104,8 @@ button {
   -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
   background-color: #555;
 }
+
+.text-right {
+  text-align: right;
+}
+

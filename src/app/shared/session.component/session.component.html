@@ -1,17 +1,29 @@
 <div class="grid-container">
-  <div class="name-item">
-    <h3>{{session.appointment}}</h3>
-    <p>With {{session.teacher}}</p>
-    <img src="https://tefltrainerspain.files.wordpress.com/2013/01/smiling-teacher.jpg">
+  <div class="comic-panel" id="name-item">
+    <img class="bg-image" src="../../../assets/images/yellow_star_bg.png">
+    <div class="white-overlay-light"></div>
+    <div class="text">
+      <h5 class="no-margin">{{session.appointment}}</h5>
+    </div>
   </div>
-  <div class="personal-item">
-    <h3>Language</h3>
-    <p>{{session.language}}</p>
-    <h3>Subject</h3>
-    <p>{{session.subject}}</p>
-    <h3>Description</h3>
-    <p>{{session.description}}</p>
-    <button type="button" class="btn bg-inverse text-white" [routerLink]="['/videochat']">Start Session</button>
-    <button class="btn bg-inverse text-white" [routerLink]="['/student-home']">Back</button>
+  <div id="image-item">
+    <img id="user-image" src="../../../assets/images/tutor_2.png">
+  </div>
+  <div class="comic-panel" id="personal-item">
+    <img class="bg-image" src="../../../assets/images/green_dot_bg.png">
+    <div class="white-overlay-light"></div>
+    <div class="text">
+      <h5>Tutor</h5>
+      <p>{{session.teacher}}</p>
+      <h5>Language</h5>
+      <p>{{session.language}}</p>
+      <h5>Subject</h5>
+      <p>{{session.subject}}</p>
+      <h5>Description</h5>
+      <p>{{session.description}}</p>
+    </div>
+  </div>
+  <div id="button-item">
+    <button type="button" class="btn bg-yellow btn-block" [routerLink]="['/videochat']">Start Session</button>
   </div>
 </div>

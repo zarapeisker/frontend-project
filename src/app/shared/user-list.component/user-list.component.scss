@@ -1,14 +1,36 @@
-.card-img-top {
-  width: 20rem;
-  height: 15rem;
-}
-
-.card {
-  width: 20rem;
-}
-
 .card-container {
   display: grid;
   grid: 1fr / repeat(4, 1fr);
+  grid-column-gap: 20px;
   justify-items: center;
 }
+
+.card-img-container {
+  height: 30vh;
+  overflow: hidden;
+  display: grid;
+  grid: 1fr / 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.card-img {
+  width: 100%;
+  height: auto;
+  grid-area: 1 / 1 / end / end;
+}
+
+.card {
+  height: 50vh;
+  border: 3px solid black;
+}
+
+button.disabled {
+  pointer-events: none;
+}
+
+.button-container {
+  cursor: not-allowed;
+}
+
+

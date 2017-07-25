@@ -1,13 +1,16 @@
 <div class="card-container">
   <div *ngFor="let user of users" class="card">
-    <img class="card-img-top" src="https://tefltrainerspain.files.wordpress.com/2013/01/smiling-teacher.jpg">
+    <div class="card-img-container">
+      <img class="card-img" src="{{user.image}}">
+    </div>
     <div class="card-block">
       <h4 class="card-title">{{user.first_name + ' ' + user.last_name}}</h4>
       <p class="card-text">{{user.description}}</p>
-      <a [routerLink]="['/profile']" class="btn bg-inverse text-white">More Info</a>
+      <div [ngClass]="{'button-container':user.buttonDisabled}">
+        <button [routerLink]="['/profile']" class="btn bg-yellow" [ngClass]="{'disabled':user.buttonDisabled}">More Info</button>
+      </div>
     </div>
   </div>
 </div>
 
-
-
+<!--[style.background-image]="'url(' + user.background + ')'"-->

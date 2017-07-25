@@ -1,77 +1,15 @@
 <div class="grid-container">
-  <div class="card conversation">
-    <div class="card-header">
-      <h3>Conversations</h3>
-    </div>
-    <div class="card-block">
-      <div class="list-group">
-        <a class="list-group-item list-group-item-action flex-column align-items-start active">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">Jack Sparrow</h5>
-          </div>
-          <small class="text-muted">3 days ago</small>
-        </a>
-        <a class="list-group-item list-group-item-action flex-column align-items-start">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">Linda Leopard</h5>
-          </div>
-          <small class="text-muted">3 days ago</small>
-        </a>
-        <a class="list-group-item list-group-item-action flex-column align-items-start">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">Lucy Lion</h5>
-          </div>
-          <small class="text-muted">3 days ago</small>
-        </a>
-        <a class="list-group-item list-group-item-action flex-column align-items-start">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">Frank Frog</h5>
-          </div>
-          <small class="text-muted">3 days ago</small>
-        </a>
-        <a class="list-group-item list-group-item-action flex-column align-items-start">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">Linda Leopard</h5>
-          </div>
-          <small class="text-muted">3 days ago</small>
-        </a>
-        <a class="list-group-item list-group-item-action flex-column align-items-start">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">Lucy Lion</h5>
-          </div>
-          <small class="text-muted">3 days ago</small>
-        </a>
-        <a class="list-group-item list-group-item-action flex-column align-items-start">
-          <div class="d-flex w-100 justify-content-between">
-            <h5 class="mb-1">Frank Frog</h5>
-          </div>
-          <small class="text-muted">3 days ago</small>
-        </a>
-      </div>
-
-    </div>
-    <div class="card-footer">
-      <button class="btn bg-inverse text-white" [routerLink]="['/student-home']">Back</button>
-    </div>
-  </div>
-
-
-
-
-
-
-  <div class="card comments">
-    <div class="card-header">
-      <h3>Comments</h3>
-    </div>
-    <div class="card-block comments-block">
+  <div class="panel">
+    <h4 class="header-text">Messages</h4>
+    <div class="comments-block">
       <ul class="chat">
-        <li class="left clearfix"><span class="chat-img float-left">
-                        <img src="http://placehold.it/50/55C1E7/fff&text=U" />
-                    </span>
+        <li class="left clearfix">
+          <div class="float-left chat-img-container">
+            <img class="chat-img" src="../../../assets/images/tutor_1.png">
+          </div>
           <div class="chat-body clearfix">
             <div class="header">
-              <strong>Jack Sparrow</strong> <small class="float-right text-muted">
+              <strong>Alysha Shamoon</strong> <small class="float-right text-muted">
               <i class="fa fa-clock-o"></i> 12 mins ago</small>
             </div>
             <p>
@@ -80,26 +18,28 @@
             </p>
           </div>
         </li>
-        <li class="right clearfix"><span class="chat-img float-right">
-                        <img src="http://placehold.it/50/FA6F57/fff&text=ME"/>
-                    </span>
+        <li class="right clearfix">
+          <div class="float-right chat-img-container">
+            <img class="chat-img" src="../../../assets/images/video_student.png">
+          </div>
           <div class="chat-body clearfix">
             <div class="header">
               <small class=" text-muted"><i class="fa fa-clock-o"></i> 13 mins ago</small>
-              <strong class="float-right">Bhaumik Patel</strong>
+              <strong class="float-right">Illiad James</strong>
             </div>
-            <p>
+            <p class="float-right text-right">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
               dolor, quis ullamcorper ligula sodales.
             </p>
           </div>
         </li>
-        <li class="left clearfix"><span class="chat-img float-left">
-                        <img src="http://placehold.it/50/55C1E7/fff&text=U"/>
-                    </span>
+        <li class="left clearfix">
+          <div class="float-left chat-img-container">
+            <img class="chat-img" src="../../../assets/images/tutor_1.png">
+          </div>
           <div class="chat-body clearfix">
             <div class="header">
-              <strong>Jack Sparrow</strong> <small class="float-right text-muted">
+              <strong>Alysha Shamoon</strong> <small class="float-right text-muted">
               <i class="fa fa-clock-o"></i> 14 mins ago</small>
             </div>
             <p>
@@ -108,26 +48,28 @@
             </p>
           </div>
         </li>
-        <li class="right clearfix"><span class="chat-img float-right">
-                        <img src="http://placehold.it/50/FA6F57/fff&text=ME"/>
-                    </span>
+        <li class="right clearfix">
+          <div class="float-right chat-img-container">
+            <img class="chat-img" src="../../../assets/images/video_student.png">
+          </div>
           <div class="chat-body clearfix">
             <div class="header">
               <small class=" text-muted"><i class="fa fa-clock-o"></i> 13 mins ago</small>
-              <strong class="float-right">Bhaumik Patel</strong>
+              <strong class="float-right">Illiad James</strong>
             </div>
-            <p>
+            <p class="float-right text-right">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
               dolor, quis ullamcorper ligula sodales.
             </p>
           </div>
         </li>
-        <li class="left clearfix"><span class="chat-img float-left">
-                        <img src="http://placehold.it/50/55C1E7/fff&text=U"/>
-                    </span>
+        <li class="left clearfix">
+          <div class="float-left chat-img-container">
+            <img class="chat-img" src="../../../assets/images/tutor_1.png">
+          </div>
           <div class="chat-body clearfix">
             <div class="header">
-              <strong>Jack Sparrow</strong> <small class="float-right text-muted">
+              <strong>Alysha Shamoon</strong> <small class="float-right text-muted">
               <i class="fa fa-clock-o"></i> 12 mins ago</small>
             </div>
             <p>
@@ -136,26 +78,28 @@
             </p>
           </div>
         </li>
-        <li class="right clearfix"><span class="chat-img float-right">
-                        <img src="http://placehold.it/50/FA6F57/fff&text=ME"/>
-                    </span>
+        <li class="right clearfix">
+          <div class="float-right chat-img-container">
+            <img class="chat-img" src="../../../assets/images/video_student.png">
+          </div>
           <div class="chat-body clearfix">
             <div class="header">
               <small class=" text-muted"><i class="fa fa-clock-o"></i> 13 mins ago</small>
-              <strong class="float-right">Bhaumik Patel</strong>
+              <strong class="float-right">Illiad James</strong>
             </div>
-            <p>
+            <p class="float-right text-right">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
               dolor, quis ullamcorper ligula sodales.
             </p>
           </div>
         </li>
-        <li class="left clearfix"><span class="chat-img float-left">
-                        <img src="http://placehold.it/50/55C1E7/fff&text=U"/>
-                    </span>
+        <li class="left clearfix">
+          <div class="float-left chat-img-container">
+            <img class="chat-img" src="../../../assets/images/tutor_1.png">
+          </div>
           <div class="chat-body clearfix">
             <div class="header">
-              <strong>Jack Sparrow</strong> <small class="float-right text-muted">
+              <strong>Alysha Shamoon</strong> <small class="float-right text-muted">
               <i class="fa fa-clock-o"></i> 14 mins ago</small>
             </div>
             <p>
@@ -164,15 +108,16 @@
             </p>
           </div>
         </li>
-        <li class="right clearfix"><span class="chat-img float-right">
-                        <img src="http://placehold.it/50/FA6F57/fff&text=ME"/>
-                    </span>
+        <li class="right clearfix">
+          <div class="float-right chat-img-container">
+            <img class="chat-img" src="../../../assets/images/video_student.png">
+          </div>
           <div class="chat-body clearfix">
             <div class="header">
               <small class=" text-muted"><i class="fa fa-clock-o"></i> 15 mins ago</small>
-              <strong class="float-right">Bhaumik Patel</strong>
+              <strong class="float-right">Illiad James</strong>
             </div>
-            <p>
+            <p class="float-right text-right">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur bibendum ornare
               dolor, quis ullamcorper ligula sodales.
             </p>
@@ -180,9 +125,9 @@
         </li>
       </ul>
     </div>
-    <div class="card-footer">
+    <div class="comments-footer">
       <textarea class="form-control" rows="3"></textarea>
-      <button class="btn btn-warning btn-lg btn-block" id="btn-chat">Send</button>
+      <button class="btn bg-yellow btn-lg btn-block disabled" id="btn-chat">Send</button>
     </div>
   </div>
 </div>

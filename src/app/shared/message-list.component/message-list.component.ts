@@ -9,21 +9,29 @@ import {Component} from '@angular/core';
 
 export class MessageListComponent {
   messages: Array<object> = [
-    { from: 'Julie Leopard',
+    { from: 'Lily Summers',
       text: 'Let\'s meet Wednesday at 1pm.',
-      buttonText: 'Respond'
+      buttonText: 'Respond',
+      image: '../../../assets/images/tutor_close.png',
+      buttonDisabled: true
     },
-    { from: 'George Seagull',
+    { from: 'Aaron Jones',
       text: 'How about Friday?',
-      buttonText: 'Respond'
+      buttonText: 'Respond',
+      image: '../../../assets/images/tutor_3.png',
+      buttonDisabled: true
     },
-    { from: 'Molly Mantis',
+    { from: 'Cynthia Tan',
       text: 'Okay, sounds good!',
-      buttonText: 'View'
+      buttonText: 'View',
+      image: '../../../assets/images/tutor_4.png',
+      buttonDisabled: true
     },
-    { from: 'Ollie Owl',
+    { from: 'Alysha Shamoon',
       text: 'Looking forward to it!',
-      buttonText: 'View'
+      buttonText: 'View',
+      image: '../../../assets/images/tutor_1.png',
+      buttonDisabled: false
     }
   ];
 }

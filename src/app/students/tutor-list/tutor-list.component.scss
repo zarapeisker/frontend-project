@@ -1,0 +1,38 @@
+.grid-container {
+  display: grid;
+  grid: 60vh / 1fr;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.header-box {
+  grid-area: 1 / 1 / end / end;
+  overflow: hidden;
+  display: grid;
+  grid: 10vh 50vh / 1fr;
+  border: 3px solid black;
+  justify-items: center;
+  align-items: center;
+  height: calc(60vh + 20px);
+  width: 100%;
+}
+
+.header-box-image {
+  grid-area: 1 / 1 / end / end;
+  width: 100%;
+  height: auto;
+}
+
+.header-box-text {
+  grid-area: 1 / 1 / 2 / end;
+  justify-self: start;
+  margin-left: 20px;
+}
+
+.user-list {
+  grid-area: 2 / 1 / 3 / end;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-bottom: 20px;
+  z-index: 1;
+}

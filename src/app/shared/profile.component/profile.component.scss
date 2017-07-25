@@ -1,33 +1,45 @@
-img {
-  height: 30vh;
-}
-
 .grid-container {
   display: grid;
-  grid: 10vh 1fr 1fr 20vh / repeat(3, 1fr);
+  grid: 5vh repeat(6, 10vh) / repeat(11, 1fr);
   justify-items: center;
+  margin-right: 10px;
+  margin-left: 10px;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
 }
 
 .name-item {
-  grid-area: 2 / 1 / 3 / 2;
+  grid-area: 2 / 4 / 3 / 6;
+}
+
+.image-item {
+  grid-area: 3 / 4 / 6 / 6;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  border: 3px solid black;
+}
+
+.image {
+  height: 100%;
+  width: auto;
 }
 
 .skill-item {
-  grid-area: 3 / 1 / 4 / 2;
+  grid-area: 2 / 2 / 6 / 4;
   align-self: start;
 }
 
 .review-item {
-  grid-area: 4 / 1 / end / 2;
-  align-self: start;
+  grid-area: 6 / 2 / 8 / 6;
 }
 
 .personal-item {
-  grid-area: 2 / 2 / 4 / 3;
+  grid-area: 2 / 6 / 8 / 8;
 }
 
 .schedule-item {
-  grid-area: 2 / 3 / 3 / end;
+  grid-area: 2 / 8 / 8 / 11;
 }
 
 ngb-datepicker {
@@ -35,11 +47,60 @@ ngb-datepicker {
 }
 
 .buttons-item {
-  grid-area: 3 / 3 / 4 / end;
-  align-self: start;
+  grid-area: 9 / 1 / end / end;
+  justify-self: center;
+}
+
+.calendar-item {
+  grid-area: 1 / 1 / 9 / end;
+  justify-self: center;
 }
 
 .buttons-item > button {
   display: block;
   margin-top: 10px;
+}
+
+.comic-panel {
+  border: 3px solid black;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid: repeat(12, 1fr) / repeat(12, 1fr);
+  overflow: hidden;
+}
+
+.panel-bg-image, .panel-text {
+  grid-area: 1 / 1 / end / end;
+}
+
+.panel-bg-image {
+  grid-area: 1 / 1 / end / end;
+  width: 100%;
+  height: auto;
+  justify-self: center;
+  align-self: center;
+}
+
+.vertical-bg-image {
+  grid-area: 1 / 1 / end / end;
+  height: 100%;
+  width: auto;
+  justify-self: center;
+  align-self: center;
+}
+
+.panel-padding {
+  padding: 3vh;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.white-overlay {
+  height: 100%;
+  width: 100%;
+  grid-area: 1 / 1 / end / end;
+  background-color: rgba(255, 255, 255, .5);
 }

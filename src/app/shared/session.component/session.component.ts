@@ -8,11 +8,10 @@ import {Component} from '@angular/core';
 
 export class SessionComponent {
   session: object = {
-    language: 'Arabic',
-    teacher: 'Linda Leopard',
-    student: 'Joey Jaguar',
-    subject: 'Math',
+    language: 'French',
+    teacher: 'Jeremy Kraynak',
+    subject: 'Science',
     appointment: 'September 5, 2017 at 3PM',
-    description: 'I need help with Pythagorean Theorem.'
+    description: 'I need help with my science homework.'
   };
 }

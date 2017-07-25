@@ -1,5 +1,30 @@
-<img src="https://s3.envato.com/files/65379905/video-chat-room.jpg">
-<button type="button" class="btn bg-inverse text-white" (click)="open(content)">End Session</button>
+<div class="grid-container">
+  <div class="bg-image">
+    <div class="tutor-image image-container">
+      <img class="image" src="../../../assets/images/tutor_2.png">
+      <div class="header-box">
+        <h5 class="color-yellow">Jeremy Kraynak</h5>
+      </div>
+    </div>
+    <div class="student-image image-container">
+      <img class="image-2" src="../../../assets/images/video_student.png">
+      <div class="header-box">
+        <h5 class="color-yellow">Illiad James</h5>
+      </div>
+    </div>
+    <div class="chat image-container">
+      <div class="header-box">
+        <h5 class="color-yellow">Messages</h5>
+      </div>
+      <div class="chat-text">
+        <p>Jeremy - Ready to get started?</p>
+        <p>Illiad - Yeah!</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!--<button type="button" class="btn bg-inverse text-white" (click)="open(content)">End Session</button>-->
 
 
 <ng-template #content let-c="close" let-d="dismiss">

@@ -10,44 +10,36 @@ import {Component} from '@angular/core';
 export class UserListComponent {
   users: Array<object> = [
     {
-      first_name: 'Melinda',
-      last_name: 'Frog',
-      email: 'melinda@mail.com',
-      skype_id: 'melinda',
-      linkedIn_profile: 'melinda@linkedIn',
-      description: 'I am amazing! I am amazing! ' +
-      'I am amazing! I am amazing! I am amazing! I am amazing!',
-      time_zone: 'EST'
-    },
-    {
-      first_name: 'Erica',
-      last_name: 'Lion',
-      email: 'erica@mail.com',
-      skype_id: 'erica',
-      linkedIn_profile: 'erica@linkedIn',
-      description: 'I am amazing! I am amazing! ' +
-      'I am amazing! I am amazing! I am amazing! I am amazing!',
-      time_zone: 'PST'
-    },
-    {
-      first_name: 'Joe',
-      last_name: 'Bear',
-      email: 'joe@mail.com',
-      skype_id: 'joe',
-      linkedIn_profile: 'joe@linkedIn',
-      description: 'I am amazing! I am amazing! ' +
-      'I am amazing! I am amazing! I am amazing! I am amazing!',
-      time_zone: 'EST'
-    },
-    {
       first_name: 'Aaron',
-      last_name: 'Monkey',
-      email: 'aaron@mail.com',
-      skype_id: 'aaron',
-      linkedIn_profile: 'aaron@linkedIn',
-      description: 'I am amazing! I am amazing! ' +
-      'I am amazing! I am amazing! I am amazing! I am amazing!',
-      time_zone: 'PST'
+      last_name: 'Jones',
+      description: 'I am a middle school English teacher.',
+      image: '../../../assets/images/tutor_3.png',
+      background: '../../../assets/images/blue_bolt_burst_bg.png',
+      buttonDisabled: true
+    },
+    {
+      first_name: 'Cynthia',
+      last_name: 'Tan',
+      description: 'I am a mechanical engineer.',
+      image: '../../../assets/images/tutor_4.png',
+      background: '../../../assets/images/blue_bolt_burst_bg.png',
+      buttonDisabled: false
+    },
+    {
+      first_name: 'Jeremy',
+      last_name: 'Kraynak',
+      description: 'I am a retired astrophysicist.',
+      image: '../../../assets/images/tutor_2.png',
+      background: '../../../assets/images/blue_bolt_burst_bg.png',
+      buttonDisabled: true
+    },
+    {
+      first_name: 'Lily',
+      last_name: 'Summers',
+      description: 'I am a certified history teacher.',
+      image: '../../../assets/images/tutor_close.png',
+      background: '../../../assets/images/blue_bolt_burst_bg.png',
+      buttonDisabled: true
     }
   ];
 }

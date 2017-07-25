@@ -1,3 +1,67 @@
-textarea {
+.grid-container {
+  display: grid;
+  grid: repeat(7, 10vh) 2vh / repeat(12, 1fr);
+}
+
+.bg-image {
+  height: 60vh;
+  grid-area: 2 / 4 / 12 / 10;
+  display: grid;
+  grid: repeat(12, 1fr) / repeat(12, 1fr);
+  background-image: url("../../../assets/images/red_star_bg.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  padding: 20px;
+  border: 3px solid black;
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+}
+
+.image-container {
+  border: 3px solid black;
+  overflow: hidden;
+  display: grid;
+  grid: 1fr / 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.tutor-image {
+  grid-area: 1 / 1 / end / 8;
+}
+
+.student-image {
+  grid-area: 1 / 8 / 8 / end;
+}
+
+.image {
+  width: auto;
+  height: 100%;
+  grid-area: 1 / 1 / end / end;
+}
+
+.image-2 {
   width: 100%;
+  height: auto;
+  grid-area: 1 / 1 / end / end;
+}
+
+.header-box {
+  height: 5vh;
+  background-color: black;
+  width: 100%;
+  align-self: start;
+  grid-area: 1 / 1 / end / end;
+  padding: 1vh;
+}
+
+.chat {
+  grid-area: 8 / 8 / end / end;
+  background-color: white;
+}
+
+.chat-text {
+  grid-area: 1 / 1 / end / end;
+  margin-top: 6vh;
+  margin-left: 5vh;
 }

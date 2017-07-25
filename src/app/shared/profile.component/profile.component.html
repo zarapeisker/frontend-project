@@ -1,47 +1,69 @@
 <div class="grid-container">
-  <div class="name-item">
-    <h1>{{user.first_name + ' ' + user.last_name}}</h1>
-    <img src="https://tefltrainerspain.files.wordpress.com/2013/01/smiling-teacher.jpg">
+  <div class="name-item comic-panel">
+    <img class="panel-bg-image" src="../../../assets/images/yellow_star_bg.png">
+    <div class="white-overlay"></div>
+    <div class="panel-text panel-padding">
+      <h5>{{user.first_name + ' ' + user.last_name}}</h5>
+    </div>
   </div>
-  <div class="personal-item">
-    <h3>LinkedIn Profile</h3>
-    <p>{{user.linkedIn_profile}}</p>
-    <h3>Description</h3>
-    <p>{{user.description}}</p>
-    <h3>Originally From</h3>
-    <p>{{user.country_from}}</p>
-    <h3>Lives In</h3>
-    <p>{{user.country_living}}</p>
-    <h3>Organization</h3>
-    <p>{{user.organization}}</p>
-    <h3>Timezone</h3>
-    <p>{{user.time_zone}}</p>
+  <div class="image-item">
+    <img class="image" src="../../../assets/images/tutor_4.png">
   </div>
-  <div class="skill-item">
-    <h3>Languages</h3>
-    <p *ngFor="let language of user.languages">
-      {{language}}
-    </p>
-    <h3>Subjects</h3>
-    <p>English</p>
-    <h4>Experience</h4>
-    <p>4 years work experience.</p>
+  <div class="personal-item comic-panel">
+    <img class="vertical-bg-image" src="../../../assets/images/orange_dot_bg.png">
+    <div class="white-overlay"></div>
+    <div class="panel-text panel-padding">
+      <h5 class="text-center">Personal</h5>
+      <br>
+      <h5>LinkedIn Profile</h5>
+      <p>{{user.linkedIn_profile}}</p>
+      <h5>Description</h5>
+      <p>{{user.description}}</p>
+      <h5>Originally From</h5>
+      <p>{{user.country_from}}</p>
+      <h5>Lives In</h5>
+      <p>{{user.country_living}}</p>
+      <h5>Organization</h5>
+      <p>{{user.organization}}</p>
+      <h5>Timezone</h5>
+      <p>{{user.time_zone}}</p>
+    </div>
   </div>
-  <div class="review-item">
-    <h2>Reviews</h2>
-    <p *ngFor="let review of user.reviews">{{review}}</p>
+  <div class="skill-item comic-panel">
+    <img class="vertical-bg-image" src="../../../assets/images/green_dot_bg.png">
+    <div class="white-overlay"></div>
+    <div class="panel-text panel-padding">
+      <h5 class="text-center">Skills</h5>
+      <br>
+      <h5>Languages</h5>
+      <p *ngFor="let language of user.languages">
+        {{language}}
+      </p>
+      <h5>Subjects</h5>
+      <p>Science</p>
+      <h5>Experience</h5>
+      <p>4 years work experience as a mechanical engineer.</p>
+    </div>
   </div>
-  <div class="schedule-item">
-    <h2>Schedule a Session</h2>
-    <ngb-datepicker [(ngModel)]="model"></ngb-datepicker>
+  <div class="review-item comic-panel">
+    <img class="panel-bg-image" src="../../../assets/images/blue_bolt_burst_bg.png">
+    <div class="white-overlay"></div>
+    <div class="panel-text panel-padding">
+      <h5>Reviews</h5>
+      <p *ngFor="let review of user.reviews">{{review}}</p>
+    </div>
   </div>
-  <div class="buttons-item">
-    <button [routerLink]="['/student-home']" type="button" class="btn bg-inverse text-white">12PM - 12:30PM</button>
-    <button [routerLink]="['/student-home']" type="button" class="btn bg-inverse text-white">12PM - 12:30PM</button>
-    <button [routerLink]="['/student-home']" type="button" class="btn bg-inverse text-white">12PM - 12:30PM</button>
-    <button class="btn bg-inverse text-white" [routerLink]="['/student-home']">Back</button>
+  <div class="schedule-item comic-panel">
+    <img class="vertical-bg-image" src="../../../assets/images/purple_bolt_bg.png">
+    <div class="white-overlay"></div>
+    <div class="calendar-item panel-padding">
+      <h5 class="text-center">Schedule a Session</h5>
+      <ngb-datepicker [(ngModel)]="model"></ngb-datepicker>
+    </div>
+    <div class="buttons-item">
+      <button [routerLink]="['/student-home']" type="button" class="btn bg-yellow">12PM - 12:30PM</button>
+      <button [routerLink]="['/student-home']" type="button" class="btn bg-yellow">12PM - 12:30PM</button>
+      <button [routerLink]="['/student-home']" type="button" class="btn bg-yellow">12PM - 12:30PM</button>
+    </div>
   </div>
 </div>
-
-
-

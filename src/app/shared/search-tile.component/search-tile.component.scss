@@ -22,5 +22,13 @@ img {
   margin-top: 1rem;
 }
 
+button.disabled {
+  pointer-events: none;
+}
+
+.button-container {
+  cursor: not-allowed;
+}
+
 
 

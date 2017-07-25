@@ -1,10 +1,14 @@
 <div class="card-container">
   <div *ngFor="let message of messages" class="card">
-    <img class="card-img-top" src="https://tefltrainerspain.files.wordpress.com/2013/01/smiling-teacher.jpg">
+    <div class="card-img-container">
+      <img class="card-img" src="{{message.image}}">
+    </div>
     <div class="card-block">
       <h4 class="card-title">{{message.from}}</h4>
       <p class="card-text">"{{message.text}}"</p>
-      <button type="button" class="btn bg-inverse text-white" [routerLink]="['/message']">{{message.buttonText}}</button>
+      <div [ngClass]="{'button-container':message.buttonDisabled}">
+        <button type="button" class="btn bg-yellow" [ngClass]="{'disabled':message.buttonDisabled}" [routerLink]="['/message']">{{message.buttonText}}</button>
+      </div>
     </div>
   </div>
 </div>

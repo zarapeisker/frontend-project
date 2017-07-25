@@ -1,12 +1,30 @@
-<div class="header">
-  <h1>Student Home</h1>
+<div class="grid-container">
+  <div id="header-box-1" class="header-box">
+    <img id="header-box-image-1" class="header-box-image" src="../../../assets/images/orange_bolt_bg.png">
+    <h3 class="header-box-text">Sessions</h3>
+    <div id="current-sessions-list" class="list header-padding">
+      <app-sessions-list></app-sessions-list>
+    </div>
+  </div>
+  <div id="header-box-2" class="header-box">
+    <img id="header-box-image-2" class="header-box-image" src="../../../assets/images/green_dot_bg.png">
+    <h3 class="header-box-text">Messages</h3>
+    <div id="messages-list" class="list header-padding">
+      <app-message-list></app-message-list>
+    </div>
+  </div>
+  <div id="header-box-3" class="header-box">
+    <img id="header-box-image-3" class="header-box-image" src="../../../assets/images/yellow_star_bg.png">
+    <h3 class="header-box-text">Find Tutors</h3>
+    <div id="users-list" class="list header-padding">
+      <app-user-list></app-user-list>
+    </div>
+  </div>
+  <!--<div id="header-box-4" class="header-box">-->
+    <!--<img id="header-box-image-4" class="header-box-image" src="../../../assets/images/yellow_star_bg.png">-->
+    <!--<h3 class="header-box-text">Past Sessions</h3>-->
+    <!--<div id="past-sessions-list" class="list header-padding">-->
+      <!--<app-sessions-list></app-sessions-list>-->
+    <!--</div>-->
+  <!--</div>-->
 </div>
-<h3>Upcoming and Requested Sessions</h3>
-<app-sessions-list></app-sessions-list>
-<h3>Messages</h3>
-<app-message-list></app-message-list>
-<h3>Find Tutors</h3>
-<app-user-list></app-user-list>
-<h3>Past Sessions</h3>
-<app-sessions-list></app-sessions-list>
-

@@ -39,4 +39,11 @@ footer {
   border-bottom: 10px white solid;
 }
 
+.dropdown-toggle::after {
+  display:none
+}
 
+.logo {
+  height: 4vh;
+  width: auto;
+}

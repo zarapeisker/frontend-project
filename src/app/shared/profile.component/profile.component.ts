@@ -7,15 +7,15 @@ import {Component} from '@angular/core';
 
 export class ProfileComponent {
   user: Object = {
-      first_name: 'Melinda',
-      last_name: 'Frog',
-      linkedIn_profile: 'melinda@linkedIn',
-      description: 'I am amazing! I am amazing!',
+      first_name: 'Cynthia',
+      last_name: 'Tan',
+      linkedIn_profile: 'cynthiatan@linkedin',
+      description: 'I am a mechanical engineer.',
       time_zone: 'EST',
-      languages: ['English', 'Arabic'],
-      country_from: 'England',
-      country_living: 'USA',
-      organization: 'Refugee Support Org',
-      reviews: ['This lady is great!', 'Melinda rocks!']
+      languages: ['English', 'Mandarin Chinese'],
+      country_from: 'USA',
+      country_living: 'New York, USA',
+      organization: 'American Society of Mechanical Engineers',
+      reviews: ['She is great!', 'Cynthia is awesome!']
   };
 }

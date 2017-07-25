@@ -121,6 +121,10 @@
   align-self: end;
 }
 
+.center {
+  grid-area: 2 / 2 / 12 / 12;
+}
+
 .content-image {
   height: 100%;
   width: auto;
@@ -134,3 +138,37 @@
   opacity: .7;
   background-color: white;
 }
+
+.number {
+  height: 10vh;
+  width: auto;
+  z-index: 1;
+}
+
+.bubble_text {
+  grid-area: 1 / 1 / end / end;
+  text-align: center;
+  z-index: 2;
+}
+
+.bubble_text_1 {
+  height: 10vh;
+  width: 20vh;
+  margin-top: 13vh;
+  margin-right: 2vh;
+  font-family: "Comic Sans MS", serif;
+}
+
+.bubble_text_2 {
+  height: 10vh;
+  width: 25vh;
+  margin-bottom: 8vh;
+  margin-right: 4vh;
+}
+
+.bubble_text_3 {
+  height: 10vh;
+  width: 20vh;
+  margin-top: 10vh;
+}
+

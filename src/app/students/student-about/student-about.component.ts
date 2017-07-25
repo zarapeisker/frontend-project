@@ -11,6 +11,6 @@ export class StudentAboutComponent {
   titleAuthor = 'Nelson Mandela';
   titleImage = '../../../assets/images/superkid.png';
   titleTextColor = 'color-white';
-  overlayColor = 'bg-blue';
+  overlayColor = 'bg-red';
   searchButtonText = 'Find a Tutor';
 }

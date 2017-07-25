@@ -45,15 +45,15 @@
 }
 
 #comic-panel-5 {
-  grid-area: 4 / 1 / end / 4;
+  grid-area: 4 / 1 / end / 6;
 }
 
 #comic-panel-6 {
-  grid-area: 4 / 4 / end / 8;
+  grid-area: 4 / 6 / end / 10;
 }
 
 #comic-panel-7 {
-  grid-area: 4 / 8 / end / end;
+  grid-area: 4 / 10 / end / end;
 }
 
 .panel {
@@ -121,6 +121,10 @@
   align-self: end;
 }
 
+.center {
+  grid-area: 2 / 2 / 12 / 12;
+}
+
 .content-image {
   height: 100%;
   width: auto;
@@ -133,6 +137,45 @@
   width: 100%;
   opacity: .7;
   background-color: white;
+}
+
+.flip {
+  -moz-transform: scaleX(-1);
+  -o-transform: scaleX(-1);
+  -webkit-transform: scaleX(-1);
+  transform: scaleX(-1);
+  -ms-filter: "FlipH";
+}
+
+.number {
+  height: 10vh;
+  width: auto;
+  z-index: 1;
+}
+
+.bubble_text {
+  grid-area: 1 / 1 / end / end;
+  text-align: center;
+  z-index: 2;
+}
+
+.bubble_text_1 {
+  height: 10vh;
+  width: 30vh;
+  margin-bottom: 10vh;
+}
+
+.bubble_text_2 {
+  height: 10vh;
+  width: 25vh;
+  margin-bottom: 4vh;
+  margin-right: 3vh;
+}
+
+.bubble_text_3 {
+  height: 10vh;
+  width: 20vh;
+  margin-top: 7vh;
 }
 
 

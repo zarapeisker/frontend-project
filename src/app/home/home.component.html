@@ -4,19 +4,19 @@
   </div>
   <img class="globe" src="../../assets/images/globe.png">
   <div id="search-tile-1">
-    <app-search-tile [searchButtonText]="searchButtonText1"></app-search-tile>
+    <app-search-tile [buttonState]="button1" [searchButtonText]="searchButtonText1"></app-search-tile>
   </div>
   <div id="search-tile-2">
-    <app-search-tile [searchButtonText]="searchButtonText2"></app-search-tile>
+    <app-search-tile [buttonState]="button2" [buttonDisabled]="buttonDisabled" [searchButtonText]="searchButtonText2"></app-search-tile>
   </div>
   <div id="comic-panel-1" class="panel">
-    <img class="panel-image" src="../../assets/images/pink_bolt_burst_bg.png">
+    <div id="panel-image-1" class="panel-image"></div>
   </div>
   <div id="comic-panel-2" class="panel">
-    <img class="panel-image" src="../../assets/images/green_dot_bg.png">
+    <div id="panel-image-2" class="panel-image"></div>
   </div>
   <div id="comic-panel-3" class="panel">
-    <img class="panel-image" src="../../assets/images/orange_bolt_bg.png">
+    <div id="panel-image-3"class="panel-image"></div>
     <img class="content-image right" src="../../assets/images/connect.png">
     <div class="text-box top-left">
       <p>EdRefuge connects refugees with tutors.</p>
@@ -24,7 +24,7 @@
     <div class="white-overlay"></div>
   </div>
   <div id="comic-panel-4" class="panel">
-    <img class="panel-image" src="../../assets/images/red_dot_bg.png">
+    <div id="panel-image-4" class="panel-image"></div>
     <img class="content-image right" src="../../assets/images/tutors_change_lives.png">
     <div class="text-box top-left">
       <p>Our tutors change lives.</p>
@@ -32,21 +32,23 @@
     <div class="white-overlay"></div>
   </div>
   <div id="comic-panel-5" class="panel">
-    <img class="panel-image" src="../../assets/images/blue_bolt_burst_bg.png">
+    <div id="panel-image-5" class="panel-image"></div>
     <img class="content-image left" src="../../assets/images/students_world.png">
     <div class="text-box bottom-right">
       <p>Our students change the world.</p>
     </div>
     <div class="white-overlay"></div>
   </div>
-  <div id="comic-panel-6" class="panel">
-    <img class="panel-image" src="../../assets/images/yellow_star_bg.png">
-  </div>
-  <div id="comic-panel-7" class="panel">
-      <img class="panel-image" src="../../assets/images/purple_bolt_bg.png">
-  </div>
-  <div id="comic-panel-8" class="panel">
-    <img class="panel-image" src="../../assets/images/red_star_bg.png">
-  </div>
+  <!--<div id="comic-panel-6" class="panel">-->
+    <!--<div id="panel-image-6" class="panel-image"></div>-->
+  <!--</div>-->
+  <!--<div id="comic-panel-7" class="panel">-->
+    <!--<div id="panel-image-7" class="panel-image"></div>-->
+  <!--</div>-->
+  <!--<div id="comic-panel-8" class="panel">-->
+    <!--<div id="panel-image-8" class="panel-image"></div>-->
+  <!--</div>-->
 </div>
 
+
+<!--[style.background-image]="'url(' + getRandomBackground() + ')'"-->

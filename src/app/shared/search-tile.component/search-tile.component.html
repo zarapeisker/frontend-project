@@ -1,6 +1,8 @@
 <div class="tile">
   <div class="search-group">
     <input placeholder="Enter a Subject" type="text" class="form-control" [(ngModel)]="subject" [ngbTypeahead]="search"/>
-    <button type="button" class="search-button btn btn-block bg-yellow" (click)="searchSubject()" [routerLink]="['/user-list']">{{searchButtonText}}</button>
+    <div [ngClass]="{'button-container':buttonDisabled}">
+      <button type="button" class="search-button btn btn-block bg-yellow" [ngClass]="{'disabled':buttonDisabled}" (click)="searchSubject()" [routerLink]="['/tutor-list']">{{searchButtonText}}</button>
+    </div>
   </div>
 </div>

@@ -1,7 +1,10 @@
 <div class="grid-container">
-  <form>
-    <input type="text" name="user" placeholder="Username">
-    <input type="password" name="pass" placeholder="Password">
-    <input type="submit" name="login" value="Login" [routerLink]="['/student-home']">
-  </form>
+  <div class="comic-panel">
+    <img class="image" src="../../assets/images/purple_star_burst_bg.png">
+    <form>
+      <input class="username" type="text" name="user" placeholder="Username">
+      <input class="password" type="password" name="pass" placeholder="Password">
+      <input class="btn btn-block bg-yellow submit" type="submit" name="login" value="Login" [routerLink]="['/student-home']">
+    </form>
+  </div>
 </div>
