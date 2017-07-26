@@ -7,7 +7,7 @@ import {Component} from '@angular/core';
 })
 
 export class SessionComponent {
-  session: object = {
+  session: any = {
     language: 'French',
     teacher: 'Jeremy Kraynak',
     subject: 'Science',

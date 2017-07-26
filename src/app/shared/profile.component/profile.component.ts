@@ -6,7 +6,7 @@ import {Component} from '@angular/core';
 })
 
 export class ProfileComponent {
-  user: Object = {
+  user: any = {
       first_name: 'Cynthia',
       last_name: 'Tan',
       linkedIn_profile: 'cynthiatan@linkedin',
