@@ -8,7 +8,7 @@ import {Component} from '@angular/core';
 
 export class HomeComponent {
   titleQuote = 'EdRefuge connects refugees and tutors. Save the world, one lesson at a time.';
-  titleImage = '../../../assets/images/superhero_kids.png';
+  titleImage = '../../../assets/images/superhero_kids.jpg';
   titleTextColor = 'color-white';
   overlayColor = 'bg-blue';
   searchButtonText1 = 'Find a Tutor';

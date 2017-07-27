@@ -13,7 +13,7 @@ export class UserListComponent {
       first_name: 'Aaron',
       last_name: 'Jones',
       description: 'I am a middle school English teacher.',
-      image: '../../../assets/images/tutor_3.png',
+      image: '../../../assets/images/tutor_3.jpg',
       background: '../../../assets/images/blue_bolt_burst_bg.png',
       buttonDisabled: true
     },
@@ -21,7 +21,7 @@ export class UserListComponent {
       first_name: 'Cynthia',
       last_name: 'Tan',
       description: 'I am a mechanical engineer.',
-      image: '../../../assets/images/tutor_4.png',
+      image: '../../../assets/images/tutor_4.jpg',
       background: '../../../assets/images/blue_bolt_burst_bg.png',
       buttonDisabled: false
     },
@@ -29,7 +29,7 @@ export class UserListComponent {
       first_name: 'Jeremy',
       last_name: 'Kraynak',
       description: 'I am a retired astrophysicist.',
-      image: '../../../assets/images/tutor_2.png',
+      image: '../../../assets/images/tutor_2.jpg',
       background: '../../../assets/images/blue_bolt_burst_bg.png',
       buttonDisabled: true
     },
@@ -37,7 +37,7 @@ export class UserListComponent {
       first_name: 'Lily',
       last_name: 'Summers',
       description: 'I am a certified history teacher.',
-      image: '../../../assets/images/tutor_close.png',
+      image: '../../../assets/images/tutor_close.jpg',
       background: '../../../assets/images/blue_bolt_burst_bg.png',
       buttonDisabled: true
     }

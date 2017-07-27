@@ -12,25 +12,25 @@ export class MessageListComponent {
     { from: 'Lily Summers',
       text: 'Let\'s meet Wednesday at 1pm.',
       buttonText: 'Respond',
-      image: '../../../assets/images/tutor_close.png',
+      image: '../../../assets/images/tutor_close.jpg',
       buttonDisabled: true
     },
     { from: 'Aaron Jones',
       text: 'How about Friday?',
       buttonText: 'Respond',
-      image: '../../../assets/images/tutor_3.png',
+      image: '../../../assets/images/tutor_3.jpg',
       buttonDisabled: true
     },
     { from: 'Cynthia Tan',
       text: 'Okay, sounds good!',
       buttonText: 'View',
-      image: '../../../assets/images/tutor_4.png',
+      image: '../../../assets/images/tutor_4.jpg',
       buttonDisabled: true
     },
     { from: 'Alysha Shamoon',
       text: 'Looking forward to it!',
       buttonText: 'View',
-      image: '../../../assets/images/tutor_1.png',
+      image: '../../../assets/images/tutor_1.jpg',
       buttonDisabled: false
     }
   ];
