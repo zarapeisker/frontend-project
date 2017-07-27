@@ -5,7 +5,7 @@
 
 .bg-image {
   height: 60vh;
-  grid-area: 2 / 4 / 12 / 10;
+  grid-area: 2 / 3 / 12 / 11;
   display: grid;
   grid: repeat(12, 1fr) / repeat(12, 1fr);
   background-image: url("../../../assets/images/red_star_bg.png");
@@ -61,6 +61,7 @@
 }
 
 .chat-text {
+  justify-self: start;
   grid-area: 1 / 1 / end / end;
   margin-top: 6vh;
   margin-left: 5vh;

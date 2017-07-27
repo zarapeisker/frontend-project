@@ -36,11 +36,11 @@ img {
 }
 
 #name-item {
-  grid-area: 2 / 4 / 3 / 7;
+  grid-area: 2 / 3 / 3 / 7;
 }
 
 #image-item {
-  grid-area: 3 / 4 / 5 / 7;
+  grid-area: 3 / 3 / 5 / 7;
   border: 3px solid black;
   width: 100%;
   height: calc(40vh + 10px);
@@ -52,18 +52,18 @@ img {
 }
 
 #user-image {
-  width: 100%;
-  height: auto;
+  height: 100%;
+  width: auto;
   grid-area: 1 / 1 / end / end;
 }
 
 #personal-item {
-  grid-area: 3 / 7 / 5 / 10;
+  grid-area: 3 / 7 / 5 / 11;
   align-self: end;
 }
 
 #button-item {
-  grid-area: 5 / 7 / 6 / 10;
+  grid-area: 5 / 7 / 6 / 11;
   width: 100%;
 }
 
