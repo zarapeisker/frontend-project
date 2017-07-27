@@ -1,6 +1,6 @@
 .grid-container {
   display: grid;
-  grid: 5vh repeat(6, 10vh) / repeat(12, 1fr);
+  grid: 5vh repeat(6, 10vh) / repeat(11, 1fr);
   justify-items: center;
   margin-right: 10px;
   margin-left: 10px;
@@ -9,18 +9,22 @@
 }
 
 .name-item {
-  grid-area: 2 / 4 / 3 / 7;
+  grid-area: 2 / 4 / 3 / 6;
 }
 
 .image-item {
-  grid-area: 3 / 4 / 6 / 7;
+  grid-area: 3 / 4 / 6 / 6;
   height: 100%;
   width: 100%;
   overflow: hidden;
   border: 3px solid black;
+  display: grid;
+  grid: 1fr / 1fr;
+  justify-items: center;
 }
 
 .image {
+  grid-area: 1 / 1 / end / end;
   height: 100%;
   width: auto;
 }
@@ -31,15 +35,15 @@
 }
 
 .review-item {
-  grid-area: 6 / 2 / 8 / 7;
+  grid-area: 6 / 2 / 8 / 6;
 }
 
 .personal-item {
-  grid-area: 2 / 7 / 8 / 9;
+  grid-area: 2 / 6 / 8 / 8;
 }
 
 .schedule-item {
-  grid-area: 2 / 9 / 8 / 12;
+  grid-area: 2 / 8 / 8 / 11;
 }
 
 ngb-datepicker {
