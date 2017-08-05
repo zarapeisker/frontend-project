@@ -1,0 +1,143 @@
+.grid-container {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid: repeat(12, 1fr) / repeat(12, 1fr);
+  align-items: center;
+  justify-items: center;
+}
+
+.content-image {
+  height: 100%;
+  width: auto;
+  z-index: 1;
+}
+
+.feature-text {
+  border: black solid 2px;
+  background-color: white;
+  padding: 2vh;
+  z-index: 1;
+}
+
+.feature-text > p {
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+}
+
+.bubble-text {
+  grid-area: 1 / 1 / end / end;
+  text-align: center;
+  z-index: 2;
+}
+
+.bubble-text-1 {
+  height: 10vh;
+  width: 20vh;
+  margin-top: 13vh;
+  margin-right: 2vh;
+}
+
+.bubble-text-2 {
+  height: 10vh;
+  width: 25vh;
+  margin-bottom: 8vh;
+  margin-right: 4vh;
+}
+
+.bubble-text-3 {
+  height: 10vh;
+  width: 20vh;
+  margin-top: 10vh;
+}
+
+.bubble-text-4 {
+  height: 10vh;
+  width: 30vh;
+  margin-bottom: 10vh;
+}
+
+.bubble-text-5 {
+  height: 10vh;
+  width: 25vh;
+  margin-bottom: 4vh;
+  margin-right: 3vh;
+}
+
+.bubble-text-6 {
+  height: 10vh;
+  width: 20vh;
+  margin-top: 7vh;
+}
+
+.top-right {
+  grid-area: 2 / 8 / 12 / 12;
+  align-self: start;
+  justify-self: end;
+}
+
+.long-top-right {
+  grid-area: 2 / 7 / 12 / 12;
+  align-self: start;
+  justify-self: end;
+}
+
+.bottom-left {
+  grid-area: 2 / 2 / 12 / 6;
+  align-self: end;
+  justify-self: start;
+}
+
+.long-bottom-left {
+  grid-area: 2 / 2 / 12 / 7;
+  align-self: end;
+  justify-self: start;
+}
+
+.long-bottom-right {
+  grid-area: 2 / 7 / 12 / 12;
+  align-self: end;
+  justify-self: start;
+}
+
+.top-left {
+  grid-area: 2 / 2 / 12 / 6;
+  align-self: start;
+  justify-self: start;
+}
+
+.bottom-right {
+  grid-area: 2 / 8 / 12 / 12;
+  align-self: end;
+  justify-self: end;
+}
+
+.left {
+  grid-area: 2 / 2 / 12 / 8;
+  justify-self: start;
+  align-self: end;
+}
+
+.right {
+  grid-area: 2 / 5 / 12 / 12;
+  justify-self: end;
+  align-self: end;
+}
+
+.center {
+  grid-area: 2 / 2 / 12 / 12;
+}
+
+.white-overlay {
+  grid-area: 1 / 1 / end / end;
+  height: 100%;
+  width: 100%;
+  opacity: .7;
+  background-color: white;
+}
+
+.number {
+  height: 10vh;
+  width: auto;
+  z-index: 1;
+}

@@ -7,7 +7,7 @@ import {Component} from '@angular/core';
 })
 
 export class HomeComponent {
-  titleQuote = 'EdRefuge connects refugees and tutors. Save the world, one lesson at a time.';
+  titleQuote = 'EdRefuge connects refugees and tutors.component. Save the world, one lesson at a time.';
   titleImage = '../../../assets/images/superhero_kids.jpg';
   titleTextColor = 'color-white';
   overlayColor = 'bg-blue';
@@ -16,6 +16,23 @@ export class HomeComponent {
   button1 = 'active';
   button2 = 'disabled';
   buttonDisabled = true;
+  // features
+  featureTextType = 'feature-text';
+  // feature 1
+  featureImage1 = '../../../../assets/images/connect.png';
+  featureImageLocation1 = 'right';
+  featureText1 = 'EdRefuge connects refugees with tutors.';
+  featureTextLocation1 = 'top-left';
+  // feature 2
+  featureImage2 = '../../../assets/images/tutors_change_lives.png';
+  featureImageLocation2 = 'right';
+  featureText2 = 'Our tutors change lives.';
+  featureTextLocation2 = 'top-left';
+  // feature 3
+  featureImage3 = '../../../assets/images/students_world.png';
+  featureImageLocation3 = 'left';
+  featureText3 = 'Our students change the world.';
+  featureTextLocation3 = 'bottom-right';
   // public pageBackgroundArray: Array<string> = [];
   // public x = 0;
   // getRandomBackground = () => {

@@ -9,11 +9,11 @@ const subjects = ['Math', 'English', 'Science', 'Social Studies'];
 @Component({
   moduleId: module.id,
   selector: 'app-search-tile',
-  styleUrls: ['search-tile.component.scss'],
-  templateUrl: 'search-tile.component.html'
+  templateUrl: 'search.component.html',
+  styleUrls: ['search.component.scss']
 })
 
-export class SearchTileComponent {
+export class SearchComponent {
   @Input() searchButtonText: string;
   @Input() buttonState: string;
   @Input() buttonDisabled: boolean;

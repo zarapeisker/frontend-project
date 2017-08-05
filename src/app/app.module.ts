@@ -2,10 +2,10 @@ import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
 import {RouterModule} from '@angular/router';
 import {AppComponent} from './app.component';
-import {HomeModule} from './home/home.module';
-import {HomeComponent} from './home/home.component';
-import {StudentModule} from './students/student.module';
-import {TutorModule} from './tutors/tutor.module';
+import {MarketingModule} from './marketing/marketing.module';
+import {HomeComponent} from './marketing/home.component/home.component';
+import {StudentModule} from './main/student/student.module';
+import {TutorModule} from './main/tutor/tutor.module';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {LoginModule} from './login/login.module';
 
@@ -13,12 +13,12 @@ import {LoginModule} from './login/login.module';
 @NgModule({
   imports: [
     BrowserModule,
-    HomeModule,
     RouterModule.forRoot([
       {path: 'home', component: HomeComponent},
       {path: '', redirectTo: 'home', pathMatch: 'full'},
       {path: '**', redirectTo: 'home', pathMatch: 'full'}
     ]),
+    MarketingModule,
     StudentModule,
     TutorModule,
     LoginModule,

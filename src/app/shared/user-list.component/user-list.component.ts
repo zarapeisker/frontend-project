@@ -12,7 +12,7 @@ export class UserListComponent {
     {
       first_name: 'Aaron',
       last_name: 'Jones',
-      description: 'I am a middle school English teacher.',
+      description: 'I am a middle school English tutor.',
       image: '../../../assets/images/tutor_3.jpg',
       background: '../../../assets/images/blue_bolt_burst_bg.png',
       buttonDisabled: true
@@ -36,7 +36,7 @@ export class UserListComponent {
     {
       first_name: 'Lily',
       last_name: 'Summers',
-      description: 'I am a certified history teacher.',
+      description: 'I am a certified history tutor.',
       image: '../../../assets/images/tutor_close.jpg',
       background: '../../../assets/images/blue_bolt_burst_bg.png',
       buttonDisabled: true

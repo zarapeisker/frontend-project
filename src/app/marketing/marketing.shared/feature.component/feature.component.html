@@ -1,0 +1,9 @@
+<div class="grid-container">
+  <img class="content-image" [ngClass]="imageLocation" [src]="imageUrl">
+  <img *ngIf="bubble" class="top-left number" [src]="numberUrl">
+  <div [ngClass]="[textLocation, textType]">
+    <p>{{text}}</p>
+  </div>
+  <div *ngIf="feature" class="white-overlay"></div>
+</div>
+
