@@ -10,14 +10,12 @@
 .content-image {
   height: 100%;
   width: auto;
-  z-index: 1;
 }
 
 .feature-text {
   border: black solid 2px;
   background-color: white;
   padding: 2vh;
-  z-index: 1;
 }
 
 .feature-text > p {
@@ -28,7 +26,6 @@
 .bubble-text {
   grid-area: 1 / 1 / end / end;
   text-align: center;
-  z-index: 2;
 }
 
 .bubble-text-1 {
@@ -134,10 +131,10 @@
   width: 100%;
   opacity: .7;
   background-color: white;
+  z-index: -1;
 }
 
 .number {
   height: 10vh;
   width: auto;
-  z-index: 1;
 }

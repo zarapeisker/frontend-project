@@ -3,7 +3,7 @@ import {Component} from '@angular/core';
 @Component({
   moduleId: module.id,
   templateUrl: 'home.component.html',
-  styleUrls: ['home.component.scss']
+  styleUrls: ['home.component.scss', '../marketing.shared/marketing.shared.scss']
 })
 
 export class HomeComponent {

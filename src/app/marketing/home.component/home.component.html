@@ -2,30 +2,26 @@
   <div class="title-tile">
     <app-title-tile [overlayColor]="overlayColor" [titleTextColor]="titleTextColor" [titleImage]="titleImage" [titleQuote]="titleQuote"></app-title-tile>
   </div>
-  <img class="globe" src="../../../assets/images/globe.png">
-  <div id="search-tile-1">
+  <img id="globe" src="../../../assets/images/globe.png">
+  <div id="search-tile-1" class="panel">
+    <img class="panel-image" src="../../../assets/images/green_star_burst_bg.jpg">
     <app-search-tile [buttonState]="button1" [searchButtonText]="searchButtonText1"></app-search-tile>
   </div>
-  <div id="search-tile-2">
+  <div id="search-tile-2" class="panel">
+    <img class="panel-image" src="../../../assets/images/orange_dot_bg.jpg">
     <app-search-tile [buttonState]="button2" [buttonDisabled]="buttonDisabled" [searchButtonText]="searchButtonText2"></app-search-tile>
   </div>
-  <div id="comic-panel-1" class="panel">
-    <div id="panel-image-1" class="panel-image"></div>
-  </div>
-  <div id="comic-panel-2" class="panel">
-    <div id="panel-image-2" class="panel-image"></div>
-  </div>
   <div id="comic-panel-3" class="panel">
+    <img class="panel-image" src="../../../assets/images/purple_bolt_bg.jpg">
     <app-feature [feature]="true" [imageUrl]="featureImage1" [imageLocation]="featureImageLocation1" [text]="featureText1" [textLocation]="featureTextLocation1" [textType]="featureTextType"></app-feature>
-    <div id="panel-image-3" class="panel-image"></div>
   </div>
   <div id="comic-panel-4" class="panel">
+    <img class="panel-image" src="../../../assets/images/red_dot_bg.jpg">
     <app-feature [feature]="true" [imageUrl]="featureImage2" [imageLocation]="featureImageLocation2" [text]="featureText2" [textLocation]="featureTextLocation2" [textType]="featureTextType"></app-feature>
-    <div id="panel-image-4" class="panel-image"></div>
   </div>
   <div id="comic-panel-5" class="panel">
+    <img class="panel-image" src="../../../assets/images/blue_bolt_burst_bg.jpg">
     <app-feature [feature]="true" [imageUrl]="featureImage3" [imageLocation]="featureImageLocation3" [text]="featureText3" [textLocation]="featureTextLocation3" [textType]="featureTextType"></app-feature>
-    <div id="panel-image-5" class="panel-image"></div>
   </div>
 </div>
 

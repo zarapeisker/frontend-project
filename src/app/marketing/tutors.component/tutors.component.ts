@@ -3,7 +3,7 @@ import {Component} from '@angular/core';
 @Component({
   moduleId: module.id,
   templateUrl: 'tutors.component.html',
-  styleUrls: ['tutors.component.scss']
+  styleUrls: ['tutors.component.scss', '../marketing.shared/marketing.shared.scss']
 })
 
 export class TutorsComponent {
