@@ -19,7 +19,7 @@ img {
 }
 
 .search-button {
-  margin-top: 1rem;
+  margin-top: .75rem;
 }
 
 button.disabled {
@@ -30,5 +30,6 @@ button.disabled {
   cursor: not-allowed;
 }
 
-
-
+#button-text {
+  margin-left: .5rem;
+}

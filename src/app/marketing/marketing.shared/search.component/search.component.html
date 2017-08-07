@@ -1,9 +1,16 @@
 <div class="tile">
   <div class="search-group">
-    <input placeholder="Enter a Subject" type="text" class="form-control" [(ngModel)]="subject" [ngbTypeahead]="search"/>
-    <div [ngClass]="{'button-container':buttonDisabled}">
-      <button type="button" class="search-button btn btn-block bg-yellow" [ngClass]="{'disabled':buttonDisabled}" (click)="searchSubject()" [routerLink]="['/tutor-list']">{{searchButtonText}}</button>
-    </div>
+    <form>
+      <div class="form-group">
+        <label for="subject-input">Enter a Subject</label>
+        <input placeholder="Subject" type="text" id="subject-input" class="form-control" name="subject" [(ngModel)]="subject" [ngbTypeahead]="search"/>
+        <div [ngClass]="{'button-container':buttonDisabled}">
+          <button type="button" class="search-button btn btn-block bg-yellow" [ngClass]="{'disabled':buttonDisabled}" (click)="searchSubject()" [routerLink]="['/tutor-list']">
+            <i class="fa fa-search" aria-hidden="true"></i>
+            <span id="button-text">{{searchButtonText}}</span>
+          </button>
+        </div>
+      </div>
+    </form>
   </div>
 </div>
-

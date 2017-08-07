@@ -25,4 +25,10 @@
   border: 3px solid black;
 }
 
+button.disabled {
+  pointer-events: none;
+}
 
+.button-container {
+  cursor: not-allowed;
+}
