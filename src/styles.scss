@@ -1,18 +1,11 @@
-/* You can add global styles to this file, and also import other style files */
 $fa-font-path: "~font-awesome/fonts";
 @import '~font-awesome/scss/font-awesome';
 @import '~bootstrap/scss/bootstrap';
 
-.fa {
-  font-size: x-large;
+@font-face {
+  font-family: "Bangers";
+  src: url("/assets/fonts/Bangers/Bangers-Regular.ttf");
 }
-
-//colors
-//$app-dgreen: #024f51;
-//$app-green: #5bbc78;
-//$app-pink: #f19bc2;
-//$app-yellow: #ffed83;
-
 
 $app-black: #050507;
 $app-yellow: #F7CF28;
@@ -22,32 +15,6 @@ $app-green: #7EC248;
 $app-pink: #ED1579;
 $app-blue: #25AAE1;
 $app-orange: #F79226;
-
-//.color-dgreen {
-//  color: $app-dgreen;
-//}
-//.color-green {
-//  color: $app-green;
-//}
-//.color-pink {
-//  color: $app-pink;
-//}
-//.color-yellow {
-//  color: $app-yellow;
-//}
-//
-//.bg-dgreen {
-//  background-color: $app-dgreen;
-//}
-//.bg-green {
-//  background-color: $app-green;
-//}
-//.bg-pink {
-//  background-color: $app-pink;
-//}
-//.bg-yellow {
-//  background-color: $app-yellow;
-//}
 
 .color-black {
   color: $app-black;
@@ -105,6 +72,10 @@ $app-orange: #F79226;
   background-color: $app-orange;
 }
 
+.fa {
+  font-size: x-large;
+}
+
 html, body {
   height: 100vh;
 }
@@ -115,10 +86,7 @@ app-root {
   flex-direction: column;
 }
 
-p {
-  font-family: "Comic Sans MS", cursive, sans-serif;
+.bangers {
+  font-family: "Bangers", sans-serif;
+  letter-spacing: 1px;
 }
-
-
-
-
