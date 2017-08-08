@@ -7,6 +7,13 @@ $fa-font-path: "~font-awesome/fonts";
   src: url("/assets/fonts/Bangers/Bangers-Regular.ttf");
 }
 
+@font-face {
+  font-family: "Open-Sans";
+  src: url("/assets/fonts/Open_Sans/OpenSans-Regular.ttf");
+}
+
+
+
 $app-black: #050507;
 $app-yellow: #F7CF28;
 $app-red: #EE2830;
@@ -87,6 +94,10 @@ app-root {
 }
 
 .bangers {
-  font-family: "Bangers", sans-serif;
+  font-family: "Bangers", cursive;
   letter-spacing: 1px;
+}
+
+* {
+  font-family: "Open-Sans", sans-serif;
 }
