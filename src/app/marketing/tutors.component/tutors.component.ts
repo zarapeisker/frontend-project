@@ -39,17 +39,17 @@ export class TutorsComponent {
   bubbleImageLocation1 = 'center';
   numberUrl1 = '../../../assets/images/numbers_1.png';
   bubbleText1 = 'Create a profile with your language(s), experience, and availability.';
-  bubbleTextLocation1 = 'bubble-text-4';
+  bubbleTextLocation1 = 'bubble-text-center';
   // bubble 2
   bubbleImage2 = '../../../assets/images/bubbles_5.png';
   bubbleImageLocation2 = 'center';
   numberUrl2 = '../../../assets/images/numbers_2.png';
-  bubbleText2 = 'We match you up with refugees looking for a tutor just like you.';
-  bubbleTextLocation2 = 'bubble-text-5';
+  bubbleText2 = 'We match you with refugees looking for tutors just like you.';
+  bubbleTextLocation2 = 'bubble-text-center';
   // bubble 3
   bubbleImage3 = '../../../assets/images/bubbles_1.png';
   bubbleImageLocation3 = 'center';
   numberUrl3 = '../../../assets/images/numbers_3.png';
   bubbleText3 = 'Schedule your first session!';
-  bubbleTextLocation3 = 'bubble-text-6';
+  bubbleTextLocation3 = 'bubble-text-center';
 }
