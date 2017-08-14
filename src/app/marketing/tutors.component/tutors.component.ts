@@ -13,7 +13,6 @@ export class TutorsComponent {
   titleTextColor = 'color-black';
   overlayColor = 'bg-yellow';
   searchButtonText = 'Find a Student';
-  buttonState = 'disabled';
   buttonDisabled = true;
   // features
   featureTextType = 'feature-text';

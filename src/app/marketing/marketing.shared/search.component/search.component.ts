@@ -15,7 +15,6 @@ const subjects = ['Math', 'English', 'Science', 'Social Studies'];
 
 export class SearchComponent {
   @Input() searchButtonText: string;
-  @Input() buttonState: string;
   @Input() buttonDisabled: boolean;
   subject: string;
 

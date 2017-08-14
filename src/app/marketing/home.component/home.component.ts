@@ -13,8 +13,6 @@ export class HomeComponent {
   overlayColor = 'bg-blue';
   searchButtonText1 = 'Find a Tutor';
   searchButtonText2 = 'Find a Student';
-  button1 = 'active';
-  button2 = 'disabled';
   buttonDisabled = true;
   // features
   featureTextType = 'feature-text';
