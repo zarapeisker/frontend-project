@@ -9,6 +9,8 @@ import {TutorsComponent} from './tutors.component/tutors.component';
 import {FeatureComponent} from './marketing.shared/feature.component/feature.component';
 import {SearchComponent} from './marketing.shared/search.component/search.component';
 import {TitleComponent} from './marketing.shared/title.component/title.component';
+import { HttpModule } from '@angular/http';
+import {SubjectService} from '../subject.service';
 
 @NgModule({
   imports: [
@@ -19,7 +21,8 @@ import {TitleComponent} from './marketing.shared/title.component/title.component
     // used in search.component
     FormsModule,
     CommonModule,
-    NgbModule
+    NgbModule,
+    HttpModule
   ],
   declarations: [
     HomeComponent,
@@ -28,6 +31,9 @@ import {TitleComponent} from './marketing.shared/title.component/title.component
     FeatureComponent,
     SearchComponent,
     TitleComponent
+  ],
+  providers: [
+    SubjectService
   ]
 })
 
