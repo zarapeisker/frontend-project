@@ -5,7 +5,7 @@
         <label for="subject-input">Enter a Subject</label>
         <input placeholder="Subject" type="text" id="subject-input" class="form-control" name="subject" [(ngModel)]="subject" [ngbTypeahead]="search"/>
         <div [ngClass]="{'button-container':buttonDisabled}">
-          <button type="button" class="search-button btn btn-block bg-yellow" [ngClass]="{'disabled':buttonDisabled}" (click)="searchSubject()" [routerLink]="['/tutor-list']">
+          <button type="button" class="search-button btn btn-block bg-yellow" [ngClass]="{'disabled':buttonDisabled}" (click)="searchBySubject()" [routerLink]="['/tutor-list']">
             <i class="fa fa-search" aria-hidden="true"></i>
             <span id="button-text">{{searchButtonText}}</span>
           </button>

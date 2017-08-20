@@ -9,8 +9,7 @@ import {TutorsComponent} from './tutors.component/tutors.component';
 import {FeatureComponent} from './marketing.shared/feature.component/feature.component';
 import {SearchComponent} from './marketing.shared/search.component/search.component';
 import {TitleComponent} from './marketing.shared/title.component/title.component';
-import { HttpModule } from '@angular/http';
-import {SubjectService} from '../subject.service';
+import {SubjectService} from '../services/subject.service';
 
 @NgModule({
   imports: [
@@ -21,8 +20,7 @@ import {SubjectService} from '../subject.service';
     // used in search.component
     FormsModule,
     CommonModule,
-    NgbModule,
-    HttpModule
+    NgbModule
   ],
   declarations: [
     HomeComponent,
