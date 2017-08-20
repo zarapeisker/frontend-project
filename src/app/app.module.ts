@@ -9,9 +9,7 @@ import {PageNotFoundComponent} from './pagenotfound.component/pagenotfound.compo
 import {HomeComponent} from './marketing/home.component/home.component';
 
 import {MarketingModule} from './marketing/marketing.module';
-import {StudentModule} from './main/student/student.module';
-import {TutorModule} from './main/tutor/tutor.module';
-import {LoginModule} from './login/login.module';
+import {UserModule} from './user/user.module';
 
 
 @NgModule({
@@ -25,9 +23,7 @@ import {LoginModule} from './login/login.module';
     ]),
     NgbModule.forRoot(),
     MarketingModule,
-    StudentModule,
-    TutorModule,
-    LoginModule
+    UserModule
   ],
   declarations: [
     AppComponent,
