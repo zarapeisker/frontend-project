@@ -6,7 +6,7 @@ import {Component} from '@angular/core';
   styleUrls: ['session.component.scss']
 })
 
-export class SessionComponent {
+export class SessionDetailComponent {
   session: any = {
     language: 'French',
     teacher: 'Jeremy Kraynak',

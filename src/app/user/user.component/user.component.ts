@@ -6,7 +6,7 @@ import {Component} from '@angular/core';
   styleUrls: ['user.component.scss']
 })
 
-export class UserComponent {
+export class UserDetailComponent {
   user: any = {
       first_name: 'Cynthia',
       last_name: 'Tan',

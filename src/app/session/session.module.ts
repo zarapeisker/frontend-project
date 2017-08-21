@@ -1,18 +1,18 @@
 import {NgModule} from '@angular/core';
 import {RouterModule} from '@angular/router';
 import {SessionListComponent} from './session-list.component/session-list.component';
-import {SessionComponent} from './session.component/session.component';
+import {SessionDetailComponent} from './session.component/session.component';
 import {CommonModule} from '@angular/common';
 
 @NgModule ({
   imports: [
     CommonModule,
     RouterModule.forChild([
-      {path: 'sessions/1', component: SessionComponent}
+      {path: 'sessions/:id', component: SessionDetailComponent}
     ])
   ],
   declarations: [
-    SessionComponent,
+    SessionDetailComponent,
     SessionListComponent
   ],
   exports: [
