@@ -7,7 +7,6 @@ import 'rxjs/add/operator/map';
 export class SubjectService {
   // eventually, the urls should be moved into a url service
   private subjectsUrl = 'https://blooming-plains-85208.herokuapp.com/subjects';
-  private teachersBySubjectUrl = 'https://blooming-plains-85208.herokuapp.com/subjects/{{subject_id}}/teachers';
   constructor(private http: Http) { }
   allSubjects(): Observable<any> {
     return this.http.get(this.subjectsUrl)

@@ -6,7 +6,7 @@ import {Component} from '@angular/core';
   styleUrls: ['welcome.students.component.scss', '../welcome.shared/welcome.shared.scss']
 })
 
-export class StudentsComponent {
+export class WelcomeStudentsComponent {
   titleQuote = 'Education is the most powerful weapon which you can use to change the world.';
   titleAuthor = 'Nelson Mandela';
   titleImage = '../../../assets/images/superkid.jpg';

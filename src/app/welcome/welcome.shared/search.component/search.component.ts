@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Observable} from 'rxjs/Observable';
+import {Router} from '@angular/router';
 import 'rxjs/add/operator/map';
 import 'rxjs/add/operator/debounceTime';
 import 'rxjs/add/operator/distinctUntilChanged';
@@ -18,7 +19,7 @@ export class SearchComponent implements OnInit {
   subject: string;
   subjects: Observable<any>;
   subjectNames: Array<string>;
-  constructor(private _subjectService: SubjectService) { }
+  constructor(private _subjectService: SubjectService, private _router: Router) { }
 
   ngOnInit() {
     this.subjects = this._subjectService.allSubjects();
@@ -35,6 +36,7 @@ export class SearchComponent implements OnInit {
 
   searchBySubject() {
     this.findSubjectId();
+    this._router.navigate(['/tutors']);
   }
 
   private findSubjectId() {

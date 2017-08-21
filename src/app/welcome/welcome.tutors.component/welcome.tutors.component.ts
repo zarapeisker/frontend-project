@@ -6,7 +6,7 @@ import {Component} from '@angular/core';
   styleUrls: ['welcome.tutors.component.scss', '../welcome.shared/welcome.shared.scss']
 })
 
-export class TutorsComponent {
+export class WelcomeTutorsComponent {
   titleQuote = 'Education is, quite simply, peace-building by another name. It is the most effective form of defense spending there is.';
   titleAuthor = 'Kofi Annan';
   titleImage = '../../../assets/images/tutorHero.jpg';
