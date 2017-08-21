@@ -10,6 +10,7 @@ import {HomeComponent} from './marketing/home.component/home.component';
 
 import {MarketingModule} from './marketing/marketing.module';
 import {UserModule} from './user/user.module';
+import {MessageModule} from './message/message.module';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import {UserModule} from './user/user.module';
     ]),
     NgbModule.forRoot(),
     MarketingModule,
-    UserModule
+    UserModule,
+    MessageModule
   ],
   declarations: [
     AppComponent,

@@ -2,12 +2,12 @@ import {Component} from '@angular/core';
 
 @Component ({
   moduleId: module.id,
-  selector: 'app-sessions-list',
-  templateUrl: 'sessions-list.component.html',
-  styleUrls: ['sessions-list.component.scss']
+  selector: 'app-session-list',
+  templateUrl: 'session-list.component.html',
+  styleUrls: ['session-list.component.scss']
 })
 
-export class SessionsListComponent {
+export class SessionListComponent {
   sessions: Array<object> = [
     {
       tutor: 'Jeremy Kraynak',
