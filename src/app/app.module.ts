@@ -6,9 +6,9 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 import {AppComponent} from './app.component/app.component';
 import {PageNotFoundComponent} from './pagenotfound.component/pagenotfound.component';
-import {HomeComponent} from './marketing/home.component/home.component';
+import {WelcomeComponent} from './welcome/welcome.component/welcome.component';
 
-import {MarketingModule} from './marketing/marketing.module';
+import {WelcomeModule} from './welcome/welcome.module';
 import {UserModule} from './user/user.module';
 import {MessageModule} from './message/message.module';
 
@@ -18,12 +18,12 @@ import {MessageModule} from './message/message.module';
     BrowserModule,
     HttpModule,
     RouterModule.forRoot([
-      {path: 'home', component: HomeComponent},
-      {path: '', redirectTo: 'home', pathMatch: 'full'},
+      {path: 'welcome', component: WelcomeComponent},
+      {path: '', redirectTo: 'welcome', pathMatch: 'full'},
       {path: '**', component: PageNotFoundComponent}
     ]),
     NgbModule.forRoot(),
-    MarketingModule,
+    WelcomeModule,
     UserModule,
     MessageModule
   ],

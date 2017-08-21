@@ -8,7 +8,7 @@ import {CommonModule} from '@angular/common';
   imports: [
     CommonModule,
     RouterModule.forChild([
-      {path: 'message', component: MessageComponent},
+      {path: 'messages/1', component: MessageComponent},
     ])
   ],
   declarations: [

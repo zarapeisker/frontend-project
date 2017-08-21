@@ -8,8 +8,7 @@ import {CommonModule} from '@angular/common';
   imports: [
     CommonModule,
     RouterModule.forChild([
-      {path: 'sessions-list', component: SessionListComponent},
-      {path: 'session', component: SessionComponent},
+      {path: 'sessions/1', component: SessionComponent}
     ])
   ],
   declarations: [

@@ -7,7 +7,7 @@
       <h4 class="card-title">{{message.from}}</h4>
       <p class="card-text">"{{message.text}}"</p>
       <div [ngClass]="{'button-container':message.buttonDisabled}">
-        <button type="button" class="btn bg-yellow" [ngClass]="{'disabled':message.buttonDisabled}" [routerLink]="['/message']">{{message.buttonText}}</button>
+        <button type="button" class="btn bg-yellow" [ngClass]="{'disabled':message.buttonDisabled}" [routerLink]="['/messages/1']">{{message.buttonText}}</button>
       </div>
     </div>
   </div>

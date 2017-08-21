@@ -2,8 +2,8 @@ import {Component} from '@angular/core';
 
 @Component({
   moduleId: module.id,
-  templateUrl: 'students.component.html',
-  styleUrls: ['students.component.scss', '../marketing.shared/marketing.shared.scss']
+  templateUrl: 'welcome.students.component.html',
+  styleUrls: ['welcome.students.component.scss', '../welcome.shared/welcome.shared.scss']
 })
 
 export class StudentsComponent {

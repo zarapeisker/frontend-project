@@ -7,7 +7,7 @@
       <h4 class="card-title">{{session.tutor}}</h4>
       <p class="card-text">{{session.appointment}}</p>
       <div [ngClass]="{'button-container':session.buttonDisabled}">
-        <button type="button" [routerLink]="['/session']" class="btn bg-yellow" [ngClass]="{'disabled':session.buttonDisabled}">Session Details</button>
+        <button type="button" [routerLink]="['/sessions/1']" class="btn bg-yellow" [ngClass]="{'disabled':session.buttonDisabled}">Session Details</button>
       </div>
     </div>
   </div>

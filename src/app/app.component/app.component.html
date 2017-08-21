@@ -2,28 +2,28 @@
   <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand color-yellow" [routerLink]="['/home']">
+  <a class="navbar-brand color-yellow" [routerLink]="['/welcome']">
     <img class="logo" src="../../assets/images/logo.png">
   </a>
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
      <ul class="navbar-nav mr-auto">
         <li class="nav-item active">
-          <a class="nav-link color-yellow bangers" [routerLink]="['/home']">Home</a>
+          <a class="nav-link color-yellow bangers" [routerLink]="['/welcome']">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link color-yellow bangers" [routerLink]="['/students']">Students</a>
+          <a class="nav-link color-yellow bangers" [routerLink]="['/welcome/students']">Students</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link color-yellow bangers" [routerLink]="['/tutors']">Tutors</a>
+          <a class="nav-link color-yellow bangers" [routerLink]="['/welcome/tutors']">Tutors</a>
         </li>
       </ul>
   </div>
-  <i class="fa fa-comments color-yellow" [routerLink]="['/dashboard']"></i>
+  <i class="fa fa-comments color-yellow" [routerLink]="['/home']"></i>
   <div ngbDropdown>
     <i class="fa fa-user" ngbDropdownToggle></i>
     <div class="dropdown-menu dropdown-menu-right">
       <button class="dropdown-item disabled">Manage Account</button>
-      <button class="dropdown-item" [routerLink]="['/home']">Sign Out</button>
+      <button class="dropdown-item" [routerLink]="['/welcome']">Sign Out</button>
     </div>
   </div>
   <i [routerLink]="['/login']" class="fa fa-sign-in color-yellow"></i>

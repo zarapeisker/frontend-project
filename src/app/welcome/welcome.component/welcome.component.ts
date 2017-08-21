@@ -2,11 +2,11 @@ import {Component} from '@angular/core';
 
 @Component({
   moduleId: module.id,
-  templateUrl: 'home.component.html',
-  styleUrls: ['home.component.scss', '../marketing.shared/marketing.shared.scss']
+  templateUrl: 'welcome.component.html',
+  styleUrls: ['welcome.component.scss', '../welcome.shared/welcome.shared.scss']
 })
 
-export class HomeComponent {
+export class WelcomeComponent {
   titleQuote = 'EdRefuge connects refugees and tutors. Save the world, one lesson at a time.';
   titleImage = '../../../assets/images/superhero_kids.jpg';
   titleTextColor = 'color-white';

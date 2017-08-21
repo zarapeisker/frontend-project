@@ -7,7 +7,7 @@
       <h4 class="card-title">{{user.first_name + ' ' + user.last_name}}</h4>
       <p class="card-text">{{user.description}}</p>
       <div [ngClass]="{'button-container':user.buttonDisabled}">
-        <button [routerLink]="['/profile']" class="btn bg-yellow" [ngClass]="{'disabled':user.buttonDisabled}">More Info</button>
+        <button [routerLink]="['/users/1']" class="btn bg-yellow" [ngClass]="{'disabled':user.buttonDisabled}">More Info</button>
       </div>
     </div>
   </div>

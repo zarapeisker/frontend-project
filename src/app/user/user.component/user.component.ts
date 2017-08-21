@@ -2,11 +2,11 @@ import {Component} from '@angular/core';
 
 @Component ({
   moduleId: module.id,
-  templateUrl: 'profile.component.html',
-  styleUrls: ['profile.component.scss']
+  templateUrl: 'user.component.html',
+  styleUrls: ['user.component.scss']
 })
 
-export class ProfileComponent {
+export class UserComponent {
   user: any = {
       first_name: 'Cynthia',
       last_name: 'Tan',

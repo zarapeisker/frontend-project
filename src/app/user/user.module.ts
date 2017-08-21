@@ -5,9 +5,9 @@ import {CommonModule} from '@angular/common';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {TileHelperModule} from '../shared/tile_helper.module';
 import {LoginComponent} from './login.component/login.component';
-import {DashboardComponent} from './dashboard.component/dashboard.component';
+import {HomeComponent} from './home.component/home.component';
 import {TutorListComponent} from './tutor-list.component/tutor-list.component';
-import {ProfileComponent} from './profile.component/profile.component';
+import {UserComponent} from './user.component/user.component';
 import {UserListComponent} from './user-list.component/user-list.component';
 import {MessageModule} from '../message/message.module';
 import {SessionModule} from '../session/session.module';
@@ -19,9 +19,9 @@ import {SessionModule} from '../session/session.module';
     NgbModule,
     RouterModule.forChild([
       {path: 'login', component: LoginComponent},
-      {path: 'dashboard', component: DashboardComponent},
-      {path: 'tutor-list', component: TutorListComponent},
-      {path: 'profile', component: ProfileComponent},
+      {path: 'home', component: HomeComponent},
+      {path: 'tutors', component: TutorListComponent},
+      {path: 'users/1', component: UserComponent},
     ]),
     TileHelperModule,
     MessageModule,
@@ -30,8 +30,8 @@ import {SessionModule} from '../session/session.module';
   declarations: [
     LoginComponent,
     TutorListComponent,
-    DashboardComponent,
-    ProfileComponent,
+    HomeComponent,
+    UserComponent,
     UserListComponent
   ]
 })
