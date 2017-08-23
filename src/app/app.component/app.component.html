@@ -18,15 +18,15 @@
         </li>
       </ul>
   </div>
-  <i class="fa fa-comments color-yellow" [routerLink]="['/home']"></i>
+  <i *ngIf="isAuthenticated()" class="fa fa-comments color-yellow" [routerLink]="['/home']"></i>
   <div ngbDropdown>
-    <i class="fa fa-user" ngbDropdownToggle></i>
+    <i *ngIf="isAuthenticated()" class="fa fa-user" ngbDropdownToggle></i>
     <div class="dropdown-menu dropdown-menu-right">
       <button class="dropdown-item disabled">Manage Account</button>
-      <button class="dropdown-item" [routerLink]="['/welcome']">Sign Out</button>
+      <button (click)="logout()" class="dropdown-item">Sign Out</button>
     </div>
   </div>
-  <i [routerLink]="['/login']" class="fa fa-sign-in color-yellow"></i>
+  <i *ngIf="!isAuthenticated()" (click)="login()" class="fa fa-sign-in color-yellow"></i>
 </nav>
 <div class="content">
   <router-outlet></router-outlet>
