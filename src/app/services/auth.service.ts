@@ -11,7 +11,7 @@ export class AuthService {
     domain: 'edrefuge.auth0.com',
     responseType: 'token id_token',
     audience: 'https://edrefuge.auth0.com/userinfo',
-    redirectUri: 'http://edrefuge.org/home',
+    redirectUri: 'http://www.edrefuge.org/home',
     scope: 'openid'
   });
 
