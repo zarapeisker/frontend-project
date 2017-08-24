@@ -1,3 +1,7 @@
+// This service retrieves all standard user data as outlined here:
+// https://openid.net/specs/openid-connect-core-1_0.html#StandardClaims
+// All remaining user data is retrives from the app database in services/user.service.ts
+
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import 'rxjs/add/operator/filter';
@@ -5,14 +9,14 @@ import * as auth0 from 'auth0-js';
 
 @Injectable()
 export class AuthService {
-
+  userProfile: any;
   auth0 = new auth0.WebAuth({
     clientID: 'xEdKl7cATKQXJc6xyqKyAfe7ulzsldpB',
     domain: 'edrefuge.auth0.com',
     responseType: 'token id_token',
     audience: 'https://edrefuge.auth0.com/userinfo',
-    redirectUri: 'http://www.edrefuge.org/home',
-    scope: 'openid'
+    redirectUri: 'http://localhost:4200/callback',
+    scope: 'openid profile email'
   });
 
   constructor(public router: Router) {}
@@ -24,13 +28,11 @@ export class AuthService {
   public handleAuthentication(): void {
     this.auth0.parseHash((err, authResult) => {
       if (authResult && authResult.accessToken && authResult.idToken) {
-        console.log(authResult);
         window.location.hash = '';
         this.setSession(authResult);
-        this.router.navigate(['/home']);
+        this.router.navigate(['/users/1']);
       } else if (err) {
         this.router.navigate(['/welcome']);
-        console.log(err);
       }
     });
   }
@@ -55,10 +57,24 @@ export class AuthService {
   public isAuthenticated(): boolean {
     // Check whether the current time is past the
     // access token's expiry time
-    console.log('inside isAuthenticated()');
     const expiresAt = JSON.parse(localStorage.getItem('expires_at'));
-    console.log(new Date().getTime() < expiresAt);
     return new Date().getTime() < expiresAt;
+  }
+
+  public getProfile(cb): void {
+    const accessToken = localStorage.getItem('access_token');
+    if (!accessToken) {
+      throw new Error('Access token must exist to fetch profile');
+    }
+
+    const self = this;
+    this.auth0.client.userInfo(accessToken, (err, profile) => {
+      if (profile) {
+        self.userProfile = profile;
+        // console.log(this.userProfile);
+      }
+      cb(err, profile);
+    });
   }
 
 }
