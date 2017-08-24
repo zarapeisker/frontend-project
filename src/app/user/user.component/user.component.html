@@ -3,31 +3,28 @@
     <img class="panel-bg-image" src="../../../assets/images/yellow_star_bg.jpg">
     <div class="white-overlay"></div>
     <div class="panel-text panel-padding">
-      <!--from auth-->
       <h5>{{user.name}}</h5>
     </div>
   </div>
   <div class="image-item">
-    <img class="image" src="{{user.picture}}">
+    <img class="image" src="../../../assets/images/tutor_4.jpg">
   </div>
   <div class="personal-item comic-panel">
     <img class="vertical-bg-image" src="../../../assets/images/orange_dot_bg.jpg">
     <div class="white-overlay"></div>
     <div class="panel-text panel-padding">
       <h5>LinkedIn Profile</h5>
-      <!--<p>{{user.linkedIn_profile}}</p>-->
-      <!--from app-->
+      <p>{{user.linkedIn_profile}}</p>
       <h5>Description</h5>
-      <!--<p>{{user.description}}</p>-->
+      <p>{{user.description}}</p>
       <h5>Originally From</h5>
-      <!--<p>{{user.country_from}}</p>-->
+      <p>{{user.country_from}}</p>
       <h5>Lives In</h5>
-      <!--<p>{{user.country_living}}</p>-->
-      <!--from app-->
+      <p>{{user.country_living}}</p>
       <h5>Organization</h5>
-      <!--<p>{{user.organization}}</p>-->
+      <p>{{user.organization}}</p>
       <h5>Timezone</h5>
-      <!--<p>{{user.zoneinfo}}</p>-->
+      <p>{{user.time_zone}}</p>
     </div>
   </div>
   <div class="skill-item comic-panel">
@@ -35,13 +32,13 @@
     <div class="white-overlay"></div>
     <div class="panel-text panel-padding">
       <h5>Languages</h5>
-      <!--<p *ngFor="let language of user.languages">-->
-        <!--{{language}}-->
-      <!--</p>-->
+      <p *ngFor="let language of user.languages">
+        {{language}}
+      </p>
       <h5>Subjects</h5>
-      <!--<p>Science</p>-->
+      <p>Science</p>
       <h5>Experience</h5>
-      <!--<p>4 years work experience as a mechanical engineer.</p>-->
+      <p>4 years work experience as a mechanical engineer.</p>
     </div>
   </div>
   <div class="review-item comic-panel">
@@ -49,7 +46,7 @@
     <div class="white-overlay"></div>
     <div class="panel-text panel-padding">
       <h5>Reviews</h5>
-      <!--<p *ngFor="let review of user.reviews">{{review}}</p>-->
+      <p *ngFor="let review of user.reviews">{{review}}</p>
     </div>
   </div>
   <div class="schedule-item comic-panel">

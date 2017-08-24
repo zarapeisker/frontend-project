@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component} from '@angular/core';
 import {AuthService} from '../../services/auth.service';
 
 @Component ({
@@ -8,10 +8,9 @@ import {AuthService} from '../../services/auth.service';
 })
 
 export class UserDetailComponent {
-  user: any;
-  profile: any = {
-    first_name: 'Cynthia',
-    last_name: 'Tan',
+  profile: any;
+  user: any = {
+    name: 'Cynthia Tan',
     linkedIn_profile: 'cynthiatan@linkedin',
     description: 'I am a mechanical engineer.',
     time_zone: 'EST',
@@ -23,14 +22,13 @@ export class UserDetailComponent {
   };
 
   constructor(public auth: AuthService) {
-    // console.log(this.auth.userProfile);
     if (this.auth.userProfile) {
-      this.user = this.auth.userProfile;
+      this.profile = this.auth.userProfile;
     } else {
       console.log('inside else');
       this.auth.getProfile((err, profile) => {
-        this.user = profile;
-        console.log(this.user);
+        this.profile = profile;
+        console.log(this.profile);
       });
     }
   }
