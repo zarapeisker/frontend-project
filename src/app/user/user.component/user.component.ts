@@ -1,4 +1,4 @@
-import {Component} from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {AuthService} from '../../services/auth.service';
 
 @Component ({
@@ -7,7 +7,7 @@ import {AuthService} from '../../services/auth.service';
   styleUrls: ['user.component.scss']
 })
 
-export class UserDetailComponent {
+export class UserDetailComponent implements OnInit {
   profile: any;
   user: any = {
     name: 'Cynthia Tan',
@@ -21,7 +21,9 @@ export class UserDetailComponent {
     reviews: ['She is great!', 'Cynthia is awesome!']
   };
 
-  constructor(public auth: AuthService) {
+  constructor(public auth: AuthService) { }
+
+  ngOnInit() {
     if (this.auth.userProfile) {
       this.profile = this.auth.userProfile;
     } else {
