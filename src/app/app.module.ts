@@ -9,9 +9,9 @@ import {UserModule} from './user/user.module';
 import {AppComponent} from './app.component/app.component';
 import {PageNotFoundComponent} from './pagenotfound.component/pagenotfound.component';
 import {CallbackComponent} from './callback.component/callback.component';
+import {LogoComponent} from './logo.component/logo.component';
 
 import {AuthService} from './services/auth.service';
-
 
 @NgModule({
   imports: [
@@ -25,7 +25,8 @@ import {AuthService} from './services/auth.service';
   declarations: [
     AppComponent,
     CallbackComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    LogoComponent
   ],
   providers: [
     AuthService
