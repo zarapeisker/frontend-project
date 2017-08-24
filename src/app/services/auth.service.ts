@@ -15,7 +15,7 @@ export class AuthService {
     domain: 'edrefuge.auth0.com',
     responseType: 'token id_token',
     audience: 'https://edrefuge.auth0.com/userinfo',
-    redirectUri: 'http://www.edrefuge.org/callback',
+    redirectUri: 'http://localhost:4200/callback',
     scope: 'openid profile email'
   });
 
