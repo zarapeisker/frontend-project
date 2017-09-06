@@ -1,0 +1,121 @@
+.grid-container {
+  display: grid;
+  grid: 5vh repeat(6, 10vh) / repeat(12, 1fr);
+  justify-items: center;
+  margin-right: 10px;
+  margin-left: 10px;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+
+.name-item {
+  grid-area: 2 / 6 / 3 / 8;
+}
+
+.image-item {
+  grid-area: 3 / 6 / 6 / 8;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  border: 3px solid black;
+  display: grid;
+  grid: 1fr / 1fr;
+  justify-items: center;
+}
+
+.image {
+  grid-area: 1 / 1 / end / end;
+  height: 100%;
+  width: auto;
+}
+
+.skill-item {
+  grid-area: 2 / 4 / 6 / 6;
+  align-self: start;
+}
+
+.description-item {
+  grid-area: 6 / 4 / 8 / 8;
+}
+
+.personal-item {
+  grid-area: 2 / 8 / 8 / 10;
+  display: grid;
+  grid: repeat(12, 1fr) / 1fr
+}
+
+button {
+  grid-area: 12 / 1 / end / end;
+}
+
+//.schedule-item {
+//  grid-area: 2 / 8 / 8 / 11;
+//}
+//
+//ngb-datepicker {
+//  margin: 20px;
+//}
+//
+//.buttons-item {
+//  grid-area: 9 / 1 / end / end;
+//  justify-self: center;
+//}
+//
+//.calendar-item {
+//  grid-area: 1 / 1 / 9 / end;
+//  justify-self: center;
+//}
+//
+//.buttons-item > button {
+//  display: block;
+//  margin-top: 10px;
+//}
+
+.comic-panel {
+  border: 3px solid black;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid: repeat(12, 1fr) / repeat(12, 1fr);
+  overflow: hidden;
+}
+
+.panel-bg-image, .panel-text {
+  grid-area: 1 / 1 / end / end;
+}
+
+.panel-bg-image {
+  grid-area: 1 / 1 / end / end;
+  width: 100%;
+  height: auto;
+  justify-self: center;
+  align-self: center;
+}
+
+.vertical-bg-image {
+  grid-area: 1 / 1 / end / end;
+  height: 100%;
+  width: auto;
+  justify-self: center;
+  align-self: center;
+}
+
+.panel-padding {
+  padding: 3vh;
+}
+
+.panel-padding-left-right {
+  padding-right: 3vh;
+  padding-left: 3vh;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.white-overlay {
+  height: 100%;
+  width: 100%;
+  grid-area: 1 / 1 / end / end;
+  background-color: rgba(255, 255, 255, .5);
+}

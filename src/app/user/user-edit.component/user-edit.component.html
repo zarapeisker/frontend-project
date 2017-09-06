@@ -1,0 +1,179 @@
+<form class="grid-container"
+      (ngSubmit)="save()"
+      [formGroup]="userForm">
+  <div class="name-item comic-panel">
+    <img class="panel-bg-image" src="../../../assets/images/yellow_star_bg.jpg">
+    <div class="white-overlay"></div>
+    <div class="panel-text panel-padding-left-right">
+      <fieldset>
+        <div
+          class="form-group"
+          [ngClass]="{'has-danger': userForm.get('name').touched && userForm.get('name').dirty && !userForm.get('name').valid }">
+          <label
+            class="form-control-label"
+            for="userName">
+            Name
+          </label>
+          <input
+            id="userName"
+            type="text"
+            minlength="3"
+            required
+            formControlName="name"/>
+          <div *ngIf="userForm.get('name').touched && userForm.get('name').dirty && userForm.get('name').errors?.required"
+               class="form-control-feedback">
+            Please enter your first name.
+          </div>
+          <div *ngIf="userForm.get('name').touched && userForm.get('name').dirty && userForm.get('name').errors?.minlength"
+               class="form-control-feedback">
+            The name must be more than 3 characters long.
+          </div>
+        </div>
+      </fieldset>
+    </div>
+  </div>
+  <div class="image-item">
+    <img class="image" src="../../../assets/images/tutor_4.jpg">
+  </div>
+  <div class="personal-item comic-panel">
+    <img class="vertical-bg-image" src="../../../assets/images/orange_dot_bg.jpg">
+    <div class="white-overlay"></div>
+    <div class="panel-text panel-padding">
+      <fieldset>
+        <legend>About You</legend>
+        <div
+          class="form-group"
+          [ngClass]="{'has-danger': userForm.get('email').touched && userForm.get('email').dirty && !userForm.get('email').valid }">
+          <label
+            class="form-control-label"
+            for="userEmail">
+            Email
+          </label>
+          <input
+            id="userEmail"
+            type="email"
+            required
+            formControlName="email"/>
+          <div *ngIf="userForm.get('email').touched && userForm.get('email').dirty && userForm.get('email').errors?.required"
+               class="form-control-feedback">
+            Please enter your email.
+          </div>
+        </div>
+        <div class="form-group">
+          <label
+            class="form-control-label"
+            for="userLinkedin">
+            LinkedIn Profile
+          </label>
+          <input
+            id="userLinkedin"
+            type="text"
+            formControlName="linkedin"/>
+        </div>
+        <div class="form-group">
+          <label
+            class="form-control-label"
+            for="userCountryFrom">
+            Originally From
+          </label>
+          <input
+            id="userCountryFrom"
+            type="text"
+            formControlName="country_from"/>
+        </div>
+        <div class="form-group">
+          <label
+            class="form-control-label"
+            for="userCountryPresent">
+            Lives In
+          </label>
+          <input
+            id="userCountryPresent"
+            type="text"
+            formControlName="country_present"/>
+        </div>
+        <div class="form-group">
+          <label
+            class="form-control-label"
+            for="userOrg">
+            Organization
+          </label>
+          <input
+            id="userOrg"
+            type="text"
+            formControlName="organizations"/>
+        </div>
+        <div
+          class="form-group">
+          <label
+            class="form-control-label"
+            for="userTimezone">
+            Timezone
+          </label>
+          <select
+            id="userTimezone"
+            formControlName="time_zone">
+            <option
+              *ngFor="let timeZone of timeZones"
+              label="{{timeZone}}"
+              value="{{timeZone}}">
+            </option>
+          </select>
+        </div>
+      </fieldset>
+    </div>
+    <button type="submit"
+            class="btn bg-yellow btn-block">
+            <!--[disabled]="!userForm.valid">-->
+      Save
+    </button>
+  </div>
+  <div class="skill-item comic-panel">
+    <img class="vertical-bg-image" src="../../../assets/images/green_dot_bg.jpg">
+    <div class="white-overlay"></div>
+    <div class="panel-text panel-padding">
+      <fieldset>
+        <legend>Experience</legend>
+        <!--<p>Languages</p>-->
+        <!--<div *ngFor="let language of languages">-->
+          <!--<label for="{{language}}">{{language}}</label>-->
+          <!--<input id="{{language}}" type="checkbox" name="user.languages" value="{{language}}">-->
+        <!--</div>-->
+        <!--<p>Subjects</p>-->
+        <!--<div *ngFor="let subject of subjects">-->
+          <!--<label for="{{subject}}">{{subject}}</label>-->
+          <!--<input id="{{subject}}" type="checkbox" name="user.subjects" value="{{subject}}">-->
+        <!--</div>-->
+        <!--<h5>Experience</h5>-->
+        <!--<p>4 years work experience as a mechanical engineer.</p>-->
+      </fieldset>
+    </div>
+  </div>
+  <div class="description-item comic-panel">
+    <img class="panel-bg-image" src="../../../assets/images/blue_bolt_burst_bg.jpg">
+    <div class="white-overlay"></div>
+    <div class="panel-text panel-padding">
+      <!--<label for="userDescription">Description</label>-->
+      <!--<textarea id="userDescription" cols="48" rows="3"></textarea>-->
+    </div>
+  </div>
+  <!--<div class="schedule-item comic-panel">-->
+  <!--<img class="vertical-bg-image" src="../../../assets/images/purple_bolt_bg.jpg">-->
+  <!--<div class="white-overlay"></div>-->
+  <!--<div class="calendar-item panel-padding">-->
+  <!--<h5 class="text-center">Schedule a Session</h5>-->
+  <!--<ngb-datepicker></ngb-datepicker>-->
+  <!--</div>-->
+  <!--<div class="buttons-item">-->
+  <!--<button [routerLink]="['/home']" type="button" class="btn bg-yellow">12PM - 12:30PM</button>-->
+  <!--<button [routerLink]="['/home']" type="button" class="btn bg-yellow">12PM - 12:30PM</button>-->
+  <!--<button [routerLink]="['/home']" type="button" class="btn bg-yellow">12PM - 12:30PM</button>-->
+  <!--</div>-->
+  <!--</div>-->
+</form>
+<br>Dirty: {{userForm.dirty}}
+<br>Touched: {{userForm.touched}}
+<br>Valid: {{userForm.valid}}
+<br>Email Errors: {{userForm.get('email').errors | json}}
+<br>Name Errors: {{userForm.get('name').errors | json}}
+<br>Value: {{userForm.value | json}}

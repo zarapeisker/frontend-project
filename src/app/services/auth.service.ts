@@ -6,6 +6,7 @@ import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import 'rxjs/add/operator/filter';
 import * as auth0 from 'auth0-js';
+import {Observable} from 'rxjs/Observable';
 
 @Injectable()
 export class AuthService {
@@ -30,7 +31,6 @@ export class AuthService {
       if (authResult && authResult.accessToken && authResult.idToken) {
         window.location.hash = '';
         this.setSession(authResult);
-        this.router.navigate(['/home']);
       } else if (err) {
         this.router.navigate(['/welcome']);
       }
@@ -43,6 +43,7 @@ export class AuthService {
     localStorage.setItem('access_token', authResult.accessToken);
     localStorage.setItem('id_token', authResult.idToken);
     localStorage.setItem('expires_at', expiresAt);
+    return;
   }
 
   public logout(): void {

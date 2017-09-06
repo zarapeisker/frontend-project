@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 import {AuthService} from '../services/auth.service';
 
 @Component({
@@ -8,17 +8,18 @@ import {AuthService} from '../services/auth.service';
   styleUrls: ['app.component.scss']
 })
 
-export class AppComponent {
-  constructor(private _authService: AuthService) {
-    _authService.handleAuthentication();
+export class AppComponent implements OnInit {
+  constructor(private authService: AuthService) { }
+  ngOnInit() {
+    this.authService.handleAuthentication();
   }
   login() {
-    this._authService.login();
+    this.authService.login();
   }
   isAuthenticated() {
-    return this._authService.isAuthenticated();
+    return this.authService.isAuthenticated();
   }
   logout() {
-    this._authService.logout();
+    this.authService.logout();
   }
 }
