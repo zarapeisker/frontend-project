@@ -1,7 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {UserService} from '../../services/user.service';
 import {ActivatedRoute} from '@angular/router';
-import {FormGroup, FormControl} from '@angular/forms';
+import {FormGroup, FormBuilder, Validators} from '@angular/forms';
 import {User} from '../user';
 
 @Component ({
@@ -16,8 +16,8 @@ export class UserEditComponent implements OnInit {
   user: User = new User();
 
   timeZones: Array<string> = ['EST', 'PST'];
-  // languages: Array<string> = ['English', 'Mandarin Chinese', 'Arabic'];
-  // subjects: Array<string> = ['Math', 'English', 'Art History'];
+  languages: Array<string> = ['English', 'Mandarin Chinese', 'Arabic'];
+  subjects: Array<string> = ['Math', 'English', 'Art History'];
   // user: any = {
   //     name: 'Cynthia Tan',
   //     email: 'cynthiatan@gmail.com',
@@ -46,33 +46,50 @@ export class UserEditComponent implements OnInit {
   //     ]
   // };
   errorMessage: any;
-  constructor(private userService: UserService, private route: ActivatedRoute) { }
+  constructor(private userService: UserService, private route: ActivatedRoute, private formBuilder: FormBuilder) { }
   ngOnInit(): void {
+    this.userForm = this.formBuilder.group({
+      given_name: ['', [Validators.required, Validators.minLength(3)]],
+      family_name: ['', [Validators.required, Validators.minLength(3)]],
+      email: ['', [Validators.required, Validators.email]],
+      linkedin: ['', [Validators.required, Validators.minLength(20)]],
+      description: ['', [Validators.required, Validators.minLength(20)]],
+      time_zone: ['', Validators.required],
+      languages: ['', Validators.required],
+      country_from: '',
+      country_present: '',
+      organizations: '',
+      subjects: ['', [Validators.required]],
+    });
     // the plus casts to a number instead of a string
     const id = +this.route.snapshot.params['id'];
     this.getUser(id);
-    this.userForm = new FormGroup({
-      name: new FormControl(),
-      email: new FormControl(),
-      linkedin: new FormControl(),
-      description: new FormControl(),
-      time_zone: new FormControl(),
-      languages: new FormControl(),
-      country_from: new FormControl(),
-      country_present: new FormControl(),
-      organizations: new FormControl(),
-      subjects: new FormControl()
-    });
   }
-  getUser(id: number) {
+  private getUser(id: number) {
     this.userService.getUser(id)
       .subscribe(
         user => {
           // this.user = user;
           console.log(user);
+          this.setUser(user);
         },
         error => this.errorMessage = <any>error
       );
+  }
+  private setUser(user) {
+    this.userForm.patchValue({
+      given_name: user.given_name,
+      family_name: user.family_name,
+      email: user.email,
+      linkedin: user.linkedin,
+      description: user.description,
+      time_zone: user.time_zone,
+      languages: user.languages,
+      country_from: user.country_from,
+      country_present: user.country_present,
+      organizations: user.organizations,
+      subjects: user.subjects
+    });
   }
   save() {
     console.log(this.userForm);

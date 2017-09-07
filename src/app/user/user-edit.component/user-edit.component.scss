@@ -1,6 +1,8 @@
 .grid-container {
   display: grid;
-  grid: 5vh repeat(6, 10vh) / repeat(12, 1fr);
+  width: 100%;
+  height: 81vh;
+  grid: 5vh repeat(7, 10vh) 5vh/ repeat(12, 1fr);
   justify-items: center;
   margin-right: 10px;
   margin-left: 10px;
@@ -9,11 +11,29 @@
 }
 
 .name-item {
-  grid-area: 2 / 6 / 3 / 8;
+  grid-area: 2 / 6 / 4 / 10;
+  display: grid;
+  grid: 1fr / 1fr;
+  align-items: center;
+  justify-items: center;
+}
+
+.name-field {
+  display: grid;
+  grid: 1fr / repeat(12, 1fr);
+  grid-column-gap: 5px;
+}
+
+.given-name {
+  grid-area: 1 / 1 / end / 7;
+}
+
+.family-name {
+  grid-area: 1 / 7 / end / end;
 }
 
 .image-item {
-  grid-area: 3 / 6 / 6 / 8;
+  grid-area: 4 / 6 / 6 / 8;
   height: 100%;
   width: 100%;
   overflow: hidden;
@@ -29,7 +49,7 @@
   width: auto;
 }
 
-.skill-item {
+.personal-item2 {
   grid-area: 2 / 4 / 6 / 6;
   align-self: start;
 }
@@ -38,16 +58,29 @@
   grid-area: 6 / 4 / 8 / 8;
 }
 
-.personal-item {
-  grid-area: 2 / 8 / 8 / 10;
+.experience-item {
+  grid-area: 4 / 8 / 8 / 10;
   display: grid;
-  grid: repeat(12, 1fr) / 1fr
+  grid: repeat(12, 1fr) / 1fr;
+}
+
+.errors-item {
+  grid-area: 2 / 10 / 8 / 12;
+  display: grid;
+  grid: repeat(12, 1fr) / 1fr;
+}
+
+.personal-item {
+  grid-area: 2 / 2 / 8 / 4;
 }
 
 button {
   grid-area: 12 / 1 / end / end;
 }
 
+.form-control {
+  display: inline;
+}
 //.schedule-item {
 //  grid-area: 2 / 8 / 8 / 11;
 //}
