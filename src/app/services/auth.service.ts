@@ -7,6 +7,7 @@ import { Router } from '@angular/router';
 import 'rxjs/add/operator/filter';
 import * as auth0 from 'auth0-js';
 import {Observable} from 'rxjs/Observable';
+import * as Rx from 'rxjs/Rx';
 
 @Injectable()
 export class AuthService {
@@ -61,21 +62,29 @@ export class AuthService {
     const expiresAt = JSON.parse(localStorage.getItem('expires_at'));
     return new Date().getTime() < expiresAt;
   }
-
   public getProfile(cb): void {
-    const accessToken = localStorage.getItem('access_token');
-    if (!accessToken) {
-      throw new Error('Access token must exist to fetch profile');
-    }
-
-    const self = this;
-    this.auth0.client.userInfo(accessToken, (err, profile) => {
-      if (profile) {
-        self.userProfile = profile;
-        // console.log(this.userProfile);
-      }
-      cb(err, profile);
-    });
+    const accessToken = this.getAccessToken();
+    console.log(accessToken);
+    accessToken
+      .subscribe(
+        token => {
+          if (!token) {
+            throw new Error('Access token must exist to fetch profile');
+          }
+          this.auth0.client.userInfo(token, (err, profile) => {
+            if (profile) {
+              this.userProfile = profile;
+            }
+            cb(err, profile);
+          });
+        },
+        e => console.log(e),
+        () => {
+          console.log('complete');
+        }
+    );
   }
-
+  private getAccessToken(): Observable<string> {
+    return Rx.Observable.of(localStorage.getItem('access_token'));
+  }
 }

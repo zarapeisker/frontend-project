@@ -2,11 +2,11 @@ import {NgModule} from '@angular/core';
 import {RouterModule} from '@angular/router';
 import {SessionListComponent} from './session-list.component/session-list.component';
 import {SessionDetailComponent} from './session.component/session.component';
-import {CommonModule} from '@angular/common';
+import {SharedModule} from '../shared/shared.module';
 
 @NgModule ({
   imports: [
-    CommonModule,
+    SharedModule,
     RouterModule.forChild([
       {path: 'sessions/:id', component: SessionDetailComponent}
     ])

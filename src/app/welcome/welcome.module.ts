@@ -1,6 +1,4 @@
 import {NgModule} from '@angular/core';
-import {FormsModule} from '@angular/forms';
-import {CommonModule} from '@angular/common';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {WelcomeRoutingModule} from './welcome-routing.module';
 import {WelcomeComponent} from './welcome.component/welcome.component';
@@ -10,12 +8,12 @@ import {FeatureComponent} from './welcome.shared/feature.component/feature.compo
 import {SearchComponent} from './welcome.shared/search.component/search.component';
 import {TitleComponent} from './welcome.shared/title.component/title.component';
 import {SubjectService} from '../services/subject.service';
+import {SharedModule} from '../shared/shared.module';
 
 @NgModule({
   imports: [
     // top 3 used in search.component
-    FormsModule,
-    CommonModule,
+    SharedModule,
     NgbModule,
     WelcomeRoutingModule
   ],

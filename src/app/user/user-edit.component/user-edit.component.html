@@ -9,7 +9,7 @@
         <div class="name-field">
           <div
             class="form-group given-name"
-            [ngClass]="{'has-danger': userForm.get('given_name').touched && userForm.get('given_name').dirty && !userForm.get('given_name').valid }">
+            [ngClass]="{'has-danger': givenNameMessage}">
             <label
               class="form-control-label"
               for="userGivenName">
@@ -20,18 +20,14 @@
               id="userGivenName"
               type="text"
               formControlName="given_name"/>
-            <div *ngIf="userForm.get('given_name').touched && userForm.get('given_name').dirty && userForm.get('given_name').errors?.required"
+            <div *ngIf="givenNameMessage"
                  class="form-control-feedback">
-              Please enter your first name.
-            </div>
-            <div *ngIf="userForm.get('given_name').touched && userForm.get('given_name').dirty && userForm.get('given_name').errors?.minlength"
-                 class="form-control-feedback">
-              The name must be at least 3 characters long.
+              {{givenNameMessage}}
             </div>
           </div>
           <div
             class="form-group family-name"
-            [ngClass]="{'has-danger': userForm.get('family_name').touched && userForm.get('family_name').dirty && !userForm.get('family_name').valid }">
+            [ngClass]="{'has-danger': familyNameMessage}">
             <label
               class="form-control-label"
               for="userFamilyName">
@@ -42,13 +38,9 @@
               id="userFamilyName"
               type="text"
               formControlName="family_name"/>
-            <div *ngIf="userForm.get('family_name').touched && userForm.get('family_name').dirty && userForm.get('family_name').errors?.required"
+            <div *ngIf="familyNameMessage"
                  class="form-control-feedback">
-              Please enter your last name.
-            </div>
-            <div *ngIf="userForm.get('family_name').touched && userForm.get('family_name').dirty && userForm.get('family_name').errors?.minlength"
-                 class="form-control-feedback">
-              The name must be at least 3 characters long.
+              {{familyNameMessage}}
             </div>
           </div>
         </div>
@@ -66,7 +58,7 @@
         <legend>About You</legend>
         <div
           class="form-group"
-          [ngClass]="{'has-danger': userForm.get('email').touched && userForm.get('email').dirty && !userForm.get('email').valid }">
+          [ngClass]="{'has-danger': emailMessage}">
           <label
             class="form-control-label"
             for="userEmail">
@@ -77,17 +69,13 @@
             id="userEmail"
             type="email"
             formControlName="email"/>
-          <div *ngIf="userForm.get('email').touched && userForm.get('email').dirty && userForm.get('email').errors?.required"
+          <div *ngIf="emailMessage"
                class="form-control-feedback">
-            Please enter your email.
-          </div>
-          <div *ngIf="userForm.get('email').touched && userForm.get('email').dirty && userForm.get('email').errors?.email"
-               class="form-control-feedback">
-            Please enter a valid email address.
+            {{emailMessage}}
           </div>
         </div>
         <div class="form-group"
-             [ngClass]="{'has-danger': userForm.get('linkedin').touched && userForm.get('linkedin').dirty && !userForm.get('linkedin').valid }">
+             [ngClass]="{'has-danger': linkedinMessage }">
           <label
             class="form-control-label"
             for="userLinkedin">
@@ -98,13 +86,9 @@
             id="userLinkedin"
             type="text"
             formControlName="linkedin"/>
-          <div *ngIf="userForm.get('linkedin').touched && userForm.get('linkedin').dirty && userForm.get('linkedin').errors?.required"
+          <div *ngIf="linkedinMessage"
                class="form-control-feedback">
-            Please enter your LinkedIn Profile.
-          </div>
-          <div *ngIf="userForm.get('linkedin').touched && userForm.get('linkedin').dirty && userForm.get('linkedin').errors?.minlength"
-               class="form-control-feedback">
-            Please enter a valid LinkedIn profile url.
+            {{linkedinMessage}}
           </div>
         </div>
         <div class="form-group">
@@ -120,7 +104,7 @@
             formControlName="organizations"/>
         </div>
         <div class="form-group"
-             [ngClass]="{'has-danger': userForm.get('time_zone').touched && !userForm.get('time_zone').valid }">
+             [ngClass]="{'has-danger': timeZoneMessage }">
           <label
             class="form-control-label"
             for="userTimezone">
@@ -136,9 +120,9 @@
               value="{{timeZone}}">
             </option>
           </select>
-          <div *ngIf="userForm.get('time_zone').touched && userForm.get('time_zone').errors?.required"
+          <div *ngIf="timeZoneMessage"
                class="form-control-feedback">
-            Please enter your time zone.
+            {{timeZoneMessage}}
           </div>
         </div>
       </fieldset>
@@ -182,7 +166,7 @@
     <div class="panel-text panel-padding">
       <fieldset>
         <div class="form-group"
-             [ngClass]="{'has-danger': userForm.get('description').touched && userForm.get('description').dirty && !userForm.get('description').valid }">
+             [ngClass]="{'has-danger': descriptionMessage }">
           <label
             class="form-control-label"
             for="userDescription">
@@ -196,13 +180,9 @@
             cols="48"
             rows="2">
           </textarea>
-          <div *ngIf="userForm.get('description').touched && userForm.get('description').dirty && userForm.get('description').errors?.required"
+          <div *ngIf="descriptionMessage"
                class="form-control-feedback">
-            Please write a brief bio about yourself.
-          </div>
-          <div *ngIf="userForm.get('description').touched && userForm.get('description').dirty && userForm.get('description').errors?.minlength"
-               class="form-control-feedback">
-            Your bio must be at least 20 characters long.
+            {{descriptionMessage}}
           </div>
         </div>
       </fieldset>
@@ -214,24 +194,25 @@
     <div class="panel-text panel-padding">
         <fieldset>
           <legend>Subjects</legend>
-          <div *ngFor="let subject of subjects">
-            <div class="form-check"
-                 [ngClass]="{'has-danger': userForm.get('subjects').touched && userForm.get('subjects').dirty && !userForm.get('subjects').valid }">
-              <label
-                class="form-check-label"
-                for="{{subject}}">
-                <input
-                  class="form-check-input"
-                  id="{{subject}}"
-                  type="checkbox"
-                  formControlName="subjects"
-                  value="{{subject}}">
-                {{subject}}
-              </label>
-              <div *ngIf="userForm.get('subjects').touched && userForm.get('subjects').dirty && userForm.get('subjects').errors?.required"
-                   class="form-control-feedback">
-                Please check at least one subject.
+          <div formGroupName="subjects"
+                [ngClass]="{'has-danger': subjectsMessage }">
+            <div *ngFor="let subject of allSubjects; let i = index">
+              <div class="form-check">
+                <label
+                  class="form-check-label"
+                  for="{{ 'subject' + i }}">
+                  <input
+                    class="form-check-input"
+                    id="{{ 'subject' + i }}"
+                    type="checkbox"
+                    [formControlName]="subject.toLowerCase()">
+                  {{subject}}
+                </label>
               </div>
+            </div>
+            <div *ngIf="subjectsMessage"
+                 class="form-control-feedback">
+              {{subjectsMessage}}
             </div>
           </div>
         </fieldset>
@@ -239,8 +220,8 @@
       <!--<p>4 years work experience as a mechanical engineer.</p>-->
     </div>
     <button type="submit"
-            class="btn bg-yellow btn-block">
-            <!--[disabled]="!userForm.valid">-->
+            class="btn bg-yellow btn-block"
+            [disabled]="!userForm.valid">
       Save
     </button>
   </div>
@@ -250,24 +231,25 @@
     <div class="panel-text panel-padding">
       <fieldset>
         <legend>Languages</legend>
-        <div *ngFor="let language of languages">
-          <div class="form-check"
-               [ngClass]="{'has-danger': userForm.get('languages').touched && userForm.get('languages').dirty && !userForm.get('languages').valid }">
-            <label
-              class="form-check-label"
-              for="{{language}}">
-              <input
-                class="form-check-input"
-                id="{{language}}"
-                type="checkbox"
-                formControlName="languages"
-                value="{{language}}">
-              {{language}}
-            </label>
-            <div *ngIf="userForm.get('languages').touched && userForm.get('languages').dirty && userForm.get('languages').errors?.required"
-                 class="form-control-feedback">
-              Please check at least one language.
+        <div formGroupName="languages"
+             [ngClass]="{'has-danger': languagesMessage}">
+          <div *ngFor="let language of allLanguages; let i = index">
+            <div class="form-check">
+              <label
+                class="form-check-label"
+                for="{{ 'language' + i }}">
+                <input
+                  class="form-check-input"
+                  id="{{ 'language' + i }}"
+                  type="checkbox"
+                  [formControlName]="language.toLowerCase()">
+                {{language}}
+              </label>
             </div>
+          </div>
+          <div *ngIf="languagesMessage"
+               class="form-control-feedback">
+            {{languagesMessage}}
           </div>
         </div>
       </fieldset>
@@ -287,8 +269,9 @@
   <!--</div>-->
   <!--</div>-->
 </form>
-<br>Dirty: {{userForm.dirty}}
-<br>Touched: {{userForm.touched}}
-<br>Errors: {{userForm.controls.languages?.errors | json}}
-<br>Valid: {{userForm.valid}}
-<br>Value: {{userForm.value | json}}
+<!--<br>Dirty: {{userForm.dirty}}-->
+<!--<br>Touched: {{userForm.touched}}-->
+<!--<br>Status: {{userForm.controls.description?.status}}-->
+<!--<br>Errors: {{userForm.controls.subjects?.errors | json}}-->
+<!--<br>Valid: {{userForm.valid}}-->
+<!--<br>Value: {{userForm.value | json}}-->
