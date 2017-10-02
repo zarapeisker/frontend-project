@@ -12,6 +12,7 @@ import {SessionModule} from '../session/session.module';
 import {UserRoutingModule} from './user-routing.module';
 import {UserService} from '../services/user.service';
 import {SharedModule} from '../shared/shared.module';
+import {UserEditGuard} from './user-guard.service';
 
 
 @NgModule ({
@@ -32,7 +33,8 @@ import {SharedModule} from '../shared/shared.module';
     UserEditComponent
   ],
   providers: [
-    UserService
+    UserService,
+    UserEditGuard
   ]
 })
 

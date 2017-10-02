@@ -67,11 +67,9 @@ export class AuthService {
   }
   public getProfile(cb): void {
     const accessToken = this.getAccessToken();
-    console.log(accessToken);
     accessToken
       .subscribe(
         token => {
-          console.log(token);
           if (!token) {
             throw new Error('Access token must exist to fetch profile');
           }
