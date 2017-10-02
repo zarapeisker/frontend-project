@@ -7,7 +7,10 @@ import { Router } from '@angular/router';
 import 'rxjs/add/operator/filter';
 import * as auth0 from 'auth0-js';
 import {Observable} from 'rxjs/Observable';
-import * as Rx from 'rxjs/Rx';
+import 'rxjs/add/operator/retryWhen';
+import 'rxjs/add/operator/scan';
+import 'rxjs/add/operator/takeWhile';
+import 'rxjs/add/operator/delay';
 
 @Injectable()
 export class AuthService {
@@ -68,6 +71,7 @@ export class AuthService {
     accessToken
       .subscribe(
         token => {
+          console.log(token);
           if (!token) {
             throw new Error('Access token must exist to fetch profile');
           }
@@ -85,6 +89,26 @@ export class AuthService {
     );
   }
   private getAccessToken(): Observable<string> {
-    return Rx.Observable.of(localStorage.getItem('access_token'));
+    return Observable.create(observer => {
+      const token = localStorage.getItem('access_token');
+      if (token) {
+        observer.next(token);
+        observer.complete();
+      } else {
+        observer.error('no access token in local storage');
+      }
+    }).retryWhen(this.retryStrategy({attempts: 5, delay: 1000}));
+  }
+
+  private retryStrategy({attempts = 5, delay = 500}) {
+    return function(errors) {
+      return errors
+        .scan((acc, value) => {
+          console.log(acc, value);
+          return acc + 1;
+        }, 0)
+        .takeWhile(acc => acc < attempts)
+        .delay(delay);
+    };
   }
 }
