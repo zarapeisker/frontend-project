@@ -20,7 +20,10 @@ export class UserDetailComponent implements OnInit {
   getUser(id: number) {
     this.userService.getUser(id)
       .subscribe(
-        user => this.user = user,
+        user => {
+          console.log(user);
+          this.user = user;
+        },
         error => this.errorMessage = <any>error
       );
   }

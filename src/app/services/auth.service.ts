@@ -70,6 +70,7 @@ export class AuthService {
     accessToken
       .subscribe(
         token => {
+          console.log(token);
           if (!token) {
             throw new Error('Access token must exist to fetch profile');
           }
